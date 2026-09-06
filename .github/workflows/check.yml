@@ -20,3 +20,5 @@ jobs:
 
       - name: 執行連結檢驗
         run: python check_urls.py
+        - name: Check for Duplicate Resources
+      run: python check_duplicates.py
