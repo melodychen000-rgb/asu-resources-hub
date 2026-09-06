@@ -32,7 +32,7 @@ export const healthLawOtherResources = [
     cost: "Free",
     eligibility: "All Public & ASU Students",
     prerequisites: "Open gallery hours / Specialist research appointment",
-    direct_url: "https://cores.research.asu.edu/computing-and-data-services/research-computing/about/",
+    direct_url: "https://meteorites.asu.edu/meteorite-collection/",
     tags: "meteorites, space, geology, istb4, science museum, astronomy, planetary"
   },
   {
@@ -54,7 +54,7 @@ export const healthLawOtherResources = [
     location: "Beus Center for Law and Society (BCLS)",
     system_type: "Walk-in / Contact",
     cost: "Free Public Legal Help",
-    eligibility: "ASU Students & Community Qualifying Members",
+    eligibility: "ASU Students & Community Qualifying裝Members",
     prerequisites: "Intake form & qualification check",
     direct_url: "https://tutoring.asu.edu/writing-centers",
     tags: "legal clinic, civil justice, patent clinic, trademark, legal aid, law school"
