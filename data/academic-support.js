@@ -1,5 +1,4 @@
 export const academicSupportResources = [
-  // --- 寫作中心 (Writing Centers) 官方預約與登入入口 ---
   {
     name: "ASU Writing Center - Tempe (Noble Library)",
     college: "Academic Support Network",
@@ -56,7 +55,7 @@ export const academicSupportResources = [
     system_type: "TutorSearch",
     cost: "Free",
     eligibility: "All ASU Online & Immersion Students",
-    prerequisites: "Log in with ASURITE on TracCloud to schedule video session",
+    prerequisites: "Log in with ASURITE to schedule video session",
     direct_url: "https://tutoring.asu.edu/student-services/online-tutoring",
     tags: "writing center, online, zoom, remote, paper review, graduate, undergrad"
   },
@@ -68,12 +67,10 @@ export const academicSupportResources = [
     system_type: "TutorSearch",
     cost: "Free",
     eligibility: "Master's & PhD Students",
-    prerequisites: "Dedicated Graduate Specialist booking via TracCloud",
-    direct_url: "https://tutoring.asu.edu/student-services/graduate-students",
+    prerequisites: "Dedicated Graduate Specialist booking",
+    direct_url: "https://tutoring.asu.edu/writing-centers",
     tags: "graduate, thesis, dissertation, research proposal, phd, masters, academic writing"
   },
-
-  // --- 數學與學科輔導 (Subject & Math Tutoring) ---
   {
     name: "ASU Math & Science Drop-in Tutoring Hub (Tempe)",
     college: "Academic Support Network",
@@ -83,7 +80,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All Students taking Math, Chem, Bio, Physics",
     prerequisites: "Walk-in with Sun Card; check live roster online",
-    direct_url: "https://tutoring.asu.edu/schedules",
+    direct_url: "https://tutoring.asu.edu/",
     tags: "math, calculus, algebra, statistics, chemistry, biology, psh, tempe, asn, free"
   },
   {
@@ -95,7 +92,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "Students enrolled in targeted high-challenge courses",
     prerequisites: "Peer-led group study sessions scheduled weekly",
-    direct_url: "https://tutoring.asu.edu/schedules",
+    direct_url: "https://tutoring.asu.edu/",
     tags: "si, supplemental instruction, study group, calculus, chemistry, biology, peer review"
   },
   {
@@ -107,11 +104,9 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All Enrolled Undergraduate Students",
     prerequisites: "1-on-1 Success Coach Booking",
-    direct_url: "https://tutoring.asu.edu/student-services/academic-mentoring",
+    direct_url: "https://tutoring.asu.edu/writing-centers",
     tags: "academic coaching, time management, study habits, exam prep, mentoring, success coach"
   },
-
-  // --- 圖書館空間、預約與設備 ---
   {
     name: "Hayden Library Makerspace (3D Printers & Laser Cutter)",
     college: "ASU Library",
@@ -169,7 +164,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "Currently Enrolled Students",
     prerequisites: "Present valid Sun Card; semester or short-term loan",
-    direct_url: "https://lib.asu.edu/services/borrow/technology",
+    direct_url: "https://lib.asu.edu/makerspace/services/tech-lending",
     tags: "laptop loan, chromebook, wifi hotspot, charger, calculator, library tech"
   },
   {
@@ -184,8 +179,6 @@ export const academicSupportResources = [
     direct_url: "https://libcal.asu.edu/reserve/spaces",
     tags: "study room, group study, quiet room, whiteboard, libcal, library"
   },
-
-  // --- SDFC 運動休閒 ---
   {
     name: "SDFC Bouldering & Top-Rope Climbing Wall",
     college: "SDFC",
@@ -195,7 +188,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "Enrolled Fee-Paying Students",
     prerequisites: "Complete Safety Waiver + Sun Card Entry",
-    direct_url: "https://fitness.asu.edu/facilities/climbing-wall",
+    direct_url: "https://fitness.asu.edu/",
     tags: "rock climbing, bouldering, belay, fitness, recreation, sdfc, tempe"
   },
   {
