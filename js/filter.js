@@ -53,11 +53,13 @@ export function matchesCampusCriteria(itemCampus, filterCampus) {
   const f = filterCampus.toLowerCase();
   const c = itemCampus.toLowerCase();
 
+  // 如果使用者選 Online，列出所有包含 online/remote/virtual/all 的資源
   if (f.includes('online')) {
-    return c.includes('online') || c.includes('remote') || c.includes('zoom') || c.includes('virtual');
+    return c.includes('online') || c.includes('remote') || c.includes('zoom') || c.includes('virtual') || c.includes('all');
   }
 
-  return c.includes(f) || c.includes('all');
+  // 如果使用者選特定實體校區 (如 Tempe, Polytechnic)，除了該校區外，全校線上適用的資源也一併呈現
+  return c.includes(f) || c.includes('all') || c.includes('online');
 }
 
 /**
