@@ -154,7 +154,7 @@ export const engineeringResources = [
     prerequisites: "Instructor requested allocation",
     direct_url: "https://scai.engineering.asu.edu/research/facilities/",
     tags: "gpu, pytorch, tensorflow, deep learning, ai, scai, cluster"
-  }
+  },
   {
     name: "High-Frequency RF/Microwave Vector Network Analyzer",
     college: "ECEE",
@@ -346,5 +346,77 @@ export const engineeringResources = [
     prerequisites: "Flight Instructor Clearance + Flight Scheduler",
     direct_url: "https://fitness.asu.edu/facilities",
     tags: "flight simulator, frasca, aviation, pilot, polytechnic"
+  },
+{
+    name: "Aircraft Maintenance Ground Training Benches",
+    college: "Aviation Programs",
+    campus: "Polytechnic",
+    location: "Aviation Tech Pavilion",
+    system_type: "Specialized Training",
+    cost: "Course Allocated",
+    eligibility: "Aviation Maintenance Technology Majors",
+    prerequisites: "Valid FAA Student Pilot/Mechanic ID",
+    direct_url: "https://fitness.asu.edu/facilities",
+    tags: "avionics, aircraft maintenance, powerplant, airframe, polytechnic"
+  },
+  {
+    name: "Avionics Oscilloscope & Calibration Testbenches",
+    college: "Aviation Programs",
+    campus: "Polytechnic",
+    location: "Aviation Tech Pavilion",
+    system_type: "Specialized Training",
+    cost: "Course Allocated",
+    eligibility: "Avionics Engineering Students",
+    prerequisites: "Department Tech Lead Approval",
+    direct_url: "https://lib.asu.edu/makerspace/services/tech-lending",
+    tags: "avionics, calibration, aeronautical, radio, polytechnic"
+  },
+  {
+    name: "Aviation Dispatch & Weather Radar Terminal",
+    college: "Aviation Programs",
+    campus: "Polytechnic",
+    location: "Simulator Building",
+    system_type: "Specialized Training",
+    cost: "Course Allocated",
+    eligibility: "Aviation Management & Dispatch Students",
+    prerequisites: "Authorized Course Credentials",
+    direct_url: "https://fitness.asu.edu/facilities",
+    tags: "dispatch, aviation weather, radar, flight planning, poly"
+  },
+  {
+    name: "Air Traffic Control Radar Simulation Suite",
+    college: "Aviation Programs",
+    campus: "Polytechnic",
+    location: "Simulator Building",
+    system_type: "Specialized Training",
+    cost: "Course Allocated",
+    eligibility: "ATC Program Students",
+    prerequisites: "Course Enrollment + Security Compliance Signed",
+    direct_url: "https://fitness.asu.edu/facilities",
+    tags: "air traffic control, atc, radar, aviation, polytechnic"
+  },
+  {
+    name: "Microfluidic Soft Lithography & Chip Bonder",
+    college: "SEMTE",
+    campus: "Tempe",
+    location: "Engineering Research Center (ERC)",
+    system_type: "Specialized Training",
+    cost: "Course / Research Allocated",
+    eligibility: "Bioengineering & Microfluidics Labs",
+    prerequisites: "Clean Bench Training + Fume Hood Booking",
+    direct_url: "https://lib.asu.edu/makerspace",
+    tags: "microfluidics, pdms, chip bonding, lithography, erc"
+  },
+  {
+    name: "Spaceflight Payload Clean Assembly Facility",
+    college: "SESE",
+    campus: "Tempe",
+    location: "ISTB4 High Bay",
+    system_type: "Specialized Training",
+    cost: "Research Allocated",
+    eligibility: "Active Space Mission Researchers",
+    prerequisites: "NASA Cleanroom Protocol + Flight Mission Roster",
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "spacecraft, cleanroom, payload, nasa, cubesat, istb4"
   }
 ];
