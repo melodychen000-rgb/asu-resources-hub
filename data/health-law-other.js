@@ -8,7 +8,7 @@ export const healthLawOtherResources = [
     cost: "Free",
     eligibility: "All ASU Students (Business/Finance Priority)",
     prerequisites: "Create Free Bloomberg Account on terminal station",
-    direct_url: "https://wpcarey.asu.edu/",
+    direct_url: "https://lib.asu.edu/makerspace/services/tech-lending",
     tags: "bloomberg terminal, financial data, stock analysis, finance, economics, wp carey"
   },
   {
@@ -20,7 +20,7 @@ export const healthLawOtherResources = [
     cost: "Free",
     eligibility: "Students taking PHY 101, 111, 112, 121, 131",
     prerequisites: "Walk-in during open clinical TA hours",
-    direct_url: "https://tutoring.asu.edu/",
+    direct_url: "https://tutoring.asu.edu/writing-centers",
     tags: "physics tutor, phy 121, phy 131, mechanics, e&m, clas, physics clinic"
   },
   {
@@ -32,7 +32,7 @@ export const healthLawOtherResources = [
     cost: "Free",
     eligibility: "All Public & ASU Students",
     prerequisites: "Open gallery hours / Specialist research appointment",
-    direct_url: "https://meteorites.asu.edu/",
+    direct_url: "https://cores.research.asu.edu/computing-and-data-services/research-computing/about/",
     tags: "meteorites, space, geology, istb4, science museum, astronomy, planetary"
   },
   {
@@ -56,7 +56,7 @@ export const healthLawOtherResources = [
     cost: "Free Public Legal Help",
     eligibility: "ASU Students & Community Qualifying Members",
     prerequisites: "Intake form & qualification check",
-    direct_url: "https://law.asu.edu/",
+    direct_url: "https://tutoring.asu.edu/writing-centers",
     tags: "legal clinic, civil justice, patent clinic, trademark, legal aid, law school"
   }
 ];
