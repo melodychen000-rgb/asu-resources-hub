@@ -1,5 +1,5 @@
 export const academicSupportResources = [
-  // --- 寫作中心 (Writing Centers) 直達 TracCloud 預約排程 ---
+  // --- 寫作中心 (Writing Centers) 官方預約與登入入口 ---
   {
     name: "ASU Writing Center - Tempe (Noble Library)",
     college: "Academic Support Network",
@@ -9,7 +9,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All ASU Undergrad & Graduate Students",
     prerequisites: "Log in with ASURITE to book 1-on-1 session or check walk-in",
-    direct_url: "https://asu.trac.cloud/",
+    direct_url: "https://tutoring.asu.edu/writing-centers",
     tags: "writing center, tutor, tutoring, essay, paper, proofreading, noble library, tempe"
   },
   {
@@ -21,7 +21,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All Downtown & Immersion Students",
     prerequisites: "Log in with ASURITE to book 1-on-1 session",
-    direct_url: "https://asu.trac.cloud/",
+    direct_url: "https://tutoring.asu.edu/writing-centers",
     tags: "writing center, downtown, ucent, journalism, nursing, paper, essay, tutor"
   },
   {
@@ -33,7 +33,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All Polytechnic Enrolled Students",
     prerequisites: "Log in with ASURITE to book 1-on-1 session",
-    direct_url: "https://asu.trac.cloud/",
+    direct_url: "https://tutoring.asu.edu/writing-centers",
     tags: "writing center, polytechnic, technical writing, paper, cntr, tutor"
   },
   {
@@ -45,7 +45,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All West Valley Enrolled Students",
     prerequisites: "Log in with ASURITE to book 1-on-1 session",
-    direct_url: "https://asu.trac.cloud/",
+    direct_url: "https://tutoring.asu.edu/writing-centers",
     tags: "writing center, west campus, fletcher library, essay, tutor"
   },
   {
@@ -57,7 +57,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All ASU Online & Immersion Students",
     prerequisites: "Log in with ASURITE on TracCloud to schedule video session",
-    direct_url: "https://asu.trac.cloud/",
+    direct_url: "https://tutoring.asu.edu/student-services/online-tutoring",
     tags: "writing center, online, zoom, remote, paper review, graduate, undergrad"
   },
   {
@@ -69,7 +69,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "Master's & PhD Students",
     prerequisites: "Dedicated Graduate Specialist booking via TracCloud",
-    direct_url: "https://asu.trac.cloud/",
+    direct_url: "https://tutoring.asu.edu/student-services/graduate-students",
     tags: "graduate, thesis, dissertation, research proposal, phd, masters, academic writing"
   },
 
@@ -106,12 +106,12 @@ export const academicSupportResources = [
     system_type: "TutorSearch",
     cost: "Free",
     eligibility: "All Enrolled Undergraduate Students",
-    prerequisites: "1-on-1 Success Coach Booking via TracCloud",
-    direct_url: "https://asu.trac.cloud/",
+    prerequisites: "1-on-1 Success Coach Booking",
+    direct_url: "https://tutoring.asu.edu/student-services/academic-mentoring",
     tags: "academic coaching, time management, study habits, exam prep, mentoring, success coach"
   },
 
-  // --- 圖書館創客空間、討論室預約與器材借用 ---
+  // --- 圖書館空間、預約與設備 ---
   {
     name: "Hayden Library Makerspace (3D Printers & Laser Cutter)",
     college: "ASU Library",
@@ -145,7 +145,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All ASU Students",
     prerequisites: "Reserve time slot via LibCal + Sun Card Check-in",
-    direct_url: "https://libcal.asu.edu/r",
+    direct_url: "https://libcal.asu.edu/reserve/spaces",
     tags: "podcast, audio recording, microphone, soundproof, voiceover, libcal, hayden"
   },
   {
@@ -157,7 +157,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All ASU Students",
     prerequisites: "LibCal Studio Reservation",
-    direct_url: "https://libcal.asu.edu/r",
+    direct_url: "https://libcal.asu.edu/reserve/spaces",
     tags: "video studio, green screen, 4k recording, lighting, libcal, noble"
   },
   {
@@ -181,11 +181,11 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All ASU Students",
     prerequisites: "Book up to 3 hours per day via LibCal with ASURITE",
-    direct_url: "https://libcal.asu.edu/r",
+    direct_url: "https://libcal.asu.edu/reserve/spaces",
     tags: "study room, group study, quiet room, whiteboard, libcal, library"
   },
 
-  // --- 運動休閒設施 (SDFC) ---
+  // --- SDFC 運動休閒 ---
   {
     name: "SDFC Bouldering & Top-Rope Climbing Wall",
     college: "SDFC",
@@ -194,7 +194,7 @@ export const academicSupportResources = [
     system_type: "Walk-in",
     cost: "Free",
     eligibility: "Enrolled Fee-Paying Students",
-    prerequisites: "Complete Safety Waiver + Sun Card Entry (Climbing shoes available)",
+    prerequisites: "Complete Safety Waiver + Sun Card Entry",
     direct_url: "https://fitness.asu.edu/facilities/climbing-wall",
     tags: "rock climbing, bouldering, belay, fitness, recreation, sdfc, tempe"
   },
@@ -206,7 +206,7 @@ export const academicSupportResources = [
     system_type: "Walk-in",
     cost: "Free",
     eligibility: "All Enrolled ASU Students",
-    prerequisites: "Scan Sun Card at North Gate; check seasonal lane schedules",
+    prerequisites: "Scan Sun Card at North Gate",
     direct_url: "https://fitness.asu.edu/facilities/aquatics",
     tags: "swimming, lap swim, pool, aquatic center, recreation, sdfc, tempe"
   },
