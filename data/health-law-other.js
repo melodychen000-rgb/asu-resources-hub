@@ -262,5 +262,101 @@ export const healthLawOtherResources = [
     prerequisites: "Radiologic Device Operator State Licensure",
     direct_url: "https://fitness.asu.edu/facilities",
     tags: "dexa, bone density, body composition, health, chs"
+  },
+  {
+    name: "Autonomous Surface Aquatic Sampling Vessels",
+    college: "CGF (Global Futures)",
+    campus: "Tempe",
+    location: "Global Futures Laboratory",
+    system_type: "Field Checkout",
+    cost: "Research Allocated",
+    eligibility: "Water Resource Researchers & Sustainability Students",
+    prerequisites: "Off-Campus Field Checkout + Risk Assessment",
+    direct_url: "https://cores.research.asu.edu/computing-and-data-services/research-computing/about/",
+    tags: "water sampling, environmental, drone boat, limnology, sustainability"
+  },
+  {
+    name: "Eddy Covariance Carbon Flux Station Terminal",
+    college: "CGF (Global Futures)",
+    campus: "Tempe",
+    location: "Remote / Walton Center",
+    system_type: "Data Access",
+    cost: "Free for Researchers",
+    eligibility: "Ecosystem Science Researchers",
+    prerequisites: "Data Use Agreement Signed",
+    direct_url: "https://cores.research.asu.edu/computing-and-data-services/research-computing/about/",
+    tags: "carbon flux, eddy covariance, climate data, ecology, walton"
+  },
+  {
+    name: "Rock Sawing & Thin-Section Polishing Lab",
+    college: "SESE",
+    campus: "Tempe",
+    location: "ISTB4 Basement",
+    system_type: "Specialized Training",
+    cost: "Free for Course Credit",
+    eligibility: "Geological Sciences Students",
+    prerequisites: "Silica Dust Safety Training + Card Collateral",
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "geology, rock saw, thin section, petrology, sese, istb4"
+  },
+  {
+    name: "Field Geophysics Seismic & Gravimeter Gear",
+    college: "SESE",
+    campus: "Tempe",
+    location: "ISTB4 Field Depot",
+    system_type: "Specialized Checkout",
+    cost: "Research Allocated",
+    eligibility: "Earth & Space Exploration Students",
+    prerequisites: "Off-Campus Equipment Authorization Form",
+    direct_url: "https://lib.asu.edu/makerspace/services/tech-lending",
+    tags: "seismic, gravimeter, geophysics, field equipment, sese"
+  },
+  {
+    name: "Consumer Neuromarketing & Eye-Tracking Lab",
+    college: "W. P. Carey School of Business",
+    campus: "Tempe",
+    location: "Business Administration C-Wing",
+    system_type: "Lab Reservation",
+    cost: "Department Allocated",
+    eligibility: "Marketing Researchers & Faculty",
+    prerequisites: "Project Scope Application + Department Head Approval",
+    direct_url: "https://lib.asu.edu/makerspace/services/tech-lending",
+    tags: "neuromarketing, eye tracking, consumer behavior, wp carey"
+  },
+  {
+    name: "IV Insertion & Venipuncture Simulator Arms",
+    college: "Edson College of Nursing and Health Innovation",
+    campus: "Downtown",
+    location: "Health North Resource Depot",
+    system_type: "Checkout",
+    cost: "Free",
+    eligibility: "Pre-licensure Nursing Students",
+    prerequisites: "Sun Card Verification Checkout",
+    direct_url: "https://nursingandhealth.asu.edu/about/grace-centers-simulation-lab",
+    tags: "iv insertion, venipuncture, nursing checkout, clinical, downtown"
+  },
+  {
+    name: "Ultra-Low Temperature (-80C) Sample Archives",
+    college: "School of Molecular Sciences (SMS)",
+    campus: "Tempe",
+    location: "Physical Sciences C-Wing",
+    system_type: "Department Access",
+    cost: "Research Allocated",
+    eligibility: "Biochemistry Lab Members",
+    prerequisites: "Designated Storage Slot Registration",
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "freezer, ultra low, biospecimen, storage, chemistry"
+  },
+  {
+    name: "Insectary & Model Organism Vivarium",
+    college: "School of Life Sciences (SOLS)",
+    campus: "Tempe",
+    location: "Life Sciences B-Wing",
+    system_type: "Department Access",
+    cost: "Research Allocated",
+    eligibility: "Entomology & Genetics Researchers",
+    prerequisites: "Strict Biosafety Clearance + Colony Registration",
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "insectary, vivarium, drosophila, genetics, sols"
   }
 ];
