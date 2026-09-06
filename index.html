@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASU Unified Resource Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between">
+
+  <!-- 頂部標題與搜尋 -->
+  <header class="bg-[#8C1D40] text-white py-10 px-4 shadow-lg">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="inline-block bg-[#FFC627] text-slate-900 text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full mb-3 shadow-sm">
+        Community Directory &bull; Academic & Labs
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">ASU Resource Hub</h1>
+      <p class="mt-3 text-slate-100 text-sm sm:text-base max-w-2xl mx-auto">
+        Search direct booking portals for Labs, Writing Centers, Free Tutoring, Cleanrooms, Studios, and Facilities.
+      </p>
+      
+      <!-- 多詞搜尋列 -->
+      <div class="mt-8 max-w-2xl mx-auto relative">
+        <input 
+          id="searchInput"
+          type="text" 
+          placeholder="Type any words (e.g. 'writing tutor', 'tempe math free', 'laser 3d', 'cleanroom')..." 
+          class="w-full px-5 py-3.5 pl-12 rounded-xl text-slate-900 shadow-xl focus:outline-none focus:ring-4 focus:ring-[#FFC627] text-base"
+        />
+        <svg class="w-5 h-5 absolute left-4 top-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </div>
+
+      <!-- 快速熱門標籤 -->
+      <div class="flex flex-wrap justify-center gap-2 mt-4 text-xs">
+        <span class="text-slate-300 self-center">Popular:</span>
+        <button onclick="setQuery('writing')" class="bg-[#701733] hover:bg-[#5a1229] text-amber-200 px-2.5 py-1 rounded-full transition border border-rose-900">✍️ Writing Centers</button>
+        <button onclick="setQuery('tutoring')" class="bg-[#701733] hover:bg-[#5a1229] text-amber-200 px-2.5 py-1 rounded-full transition border border-rose-900">🎓 Free Tutoring</button>
+        <button onclick="setQuery('makerspace 3d')" class="bg-[#701733] hover:bg-[#5a1229] text-amber-200 px-2.5 py-1 rounded-full transition border border-rose-900">🖨️ 3D Printing</button>
+        <button onclick="setQuery('cleanroom')" class="bg-[#701733] hover:bg-[#5a1229] text-amber-200 px-2.5 py-1 rounded-full transition border border-rose-900">🔬 Cleanroom</button>
+        <button onclick="setQuery('recording studio')" class="bg-[#701733] hover:bg-[#5a1229] text-amber-200 px-2.5 py-1 rounded-full transition border border-rose-900">🎙️ Audio Studio</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 篩選列與卡片展示區 -->
+  <main class="max-w-6xl mx-auto px-4 py-8 flex-1 w-full">
+    <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm mb-6 flex flex-wrap gap-4 items-center justify-between">
+      
+      <div class="flex flex-wrap items-center gap-3">
+        <!-- 校區篩選 -->
+        <div>
+          <label class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Campus</label>
+          <select id="campusFilter" class="bg-slate-50 border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-[#8C1D40] outline-none">
+            <option value="ALL">All Campuses</option>
+            <option value="Tempe">Tempe</option>
+            <option value="Downtown">Downtown</option>
+            <option value="Polytechnic">Polytechnic</option>
+            <option value="West">West Valley</option>
+            <option value="Online">Online / Remote</option>
+          </select>
+        </div>
+
+        <!-- 學院篩選 -->
+        <div>
+          <label class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">College / Unit</label>
+          <select id="collegeFilter" class="bg-slate-50 border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-[#8C1D40] outline-none">
+            <option value="ALL">All Colleges & Units</option>
+            <option value="Academic Support Network">Academic Support Network (ASN)</option>
+            <option value="FSE">FSE (Engineering & Tech)</option>
+            <option value="Core Facilities">Core Research Facilities</option>
+            <option value="Herberger">Herberger Institute (HIDA)</option>
+            <option value="Cronkite">Cronkite Journalism</option>
+            <option value="W. P. Carey">W. P. Carey Business</option>
+            <option value="ASU Library">ASU Library</option>
+            <option value="SDFC">Sun Devil Fitness (SDFC)</option>
+            <option value="Health">Health & Nursing (Edson/CHS)</option>
+            <option value="Global Futures">Global Futures / Sustainability</option>
+            <option value="The College">The College (CLAS / SESE)</option>
+            <option value="Law">Sandra Day O'Connor Law</option>
+          </select>
+        </div>
+
+        <!-- 預約系統篩選 -->
+        <div>
+          <label class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Booking System</label>
+          <select id="systemFilter" class="bg-slate-50 border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-[#8C1D40] outline-none">
+            <option value="ALL">All Systems</option>
+            <option value="TutorSearch">TutorSearch / TracCloud</option>
+            <option value="LibCal">LibCal</option>
+            <option value="iLab">iLab Core</option>
+            <option value="Walk-in">Walk-in / Sun Card</option>
+            <option value="Portal">Web Portal / Form</option>
+          </select>
+        </div>
+
+        <!-- 費用篩選 -->
+        <div>
+          <label class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Cost</label>
+          <select id="costFilter" class="bg-slate-50 border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-[#8C1D40] outline-none">
+            <option value="ALL">All Fees</option>
+            <option value="Free">100% Free</option>
+            <option value="Fee-based">Consumable / Lab Fee</option>
+          </select>
+        </div>
+
+        <!-- 重設按鈕 -->
+        <div class="self-end">
+          <button 
+            id="resetBtn"
+            class="bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-800 text-xs font-semibold py-2 px-3 rounded-lg border border-slate-200 transition-colors flex items-center gap-1"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+            Reset
+          </button>
+        </div>
+      </div>
+
+      <!-- 統計筆數 -->
+      <div class="text-xs font-semibold text-slate-500 self-end pb-1.5">
+        <span id="resultCount" class="text-slate-900 font-bold">0</span> resources match
+      </div>
+    </div>
+
+    <!-- 卡片展示容器 -->
+    <div id="resourceGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </main>
+
+  <footer class="bg-slate-100 border-t border-slate-200 py-6 text-center text-xs text-slate-500">
+    <p>ASU Open Resource Hub &bull; Direct links redirect to official ASU portals.</p>
+  </footer>
+
+  <!-- 引入主程式 -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
