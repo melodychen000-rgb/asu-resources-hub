@@ -20,20 +20,33 @@ print(f"{'狀態':<10} | {'檔案來源':<22} | {'資源名稱':<32} | 最終抵
 print("-" * 105)
 
 headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
 }
 
 needs_fix = 0
 
 for item in all_resources:
+    raw_url = item["url"]
+    
+    # 1. 針對已知官方直達系統 (TracCloud / LibCal / iLab)，直接認定為直達入口
+    if "asu.trac.cloud" in raw_url:
+        print(f"{'✅ 直達入口':<10} | {item['file']:<22} | {item['name'][:30]:<32} | [TracCloud 預約系統直達] {raw_url}")
+        continue
+
+    if "libcal.asu.edu" in raw_url:
+        print(f"{'✅ 直達入口':<10} | {item['file']:<22} | {item['name'][:30]:<32} | [LibCal 預約系統直達] {raw_url}")
+        continue
+
+    # 2. 其他網址自動連線追蹤
     try:
-        resp = requests.get(item["url"], headers=headers, timeout=10, allow_redirects=True)
+        resp = requests.get(raw_url, headers=headers, timeout=10, allow_redirects=True)
         final_url = resp.url.lower()
         html = resp.text.lower()
 
-        # 入口特徵判定 (TracCloud, LibCal, iLab, ASURITE SSO 等)
-        is_portal = any(k in final_url for k in ['trac.cloud', 'libcal.asu.edu', 'corefacilities.org', 'cas/login', 'auth', 'sign-in']) or \
-                    any(k in html for k in ['asurite sign in', 'login with asurite', 'reserve this room', 'schedule appointment'])
+        # 入口特徵庫 (包含排班表 schedules、研究平台 ilab、軟體領取 portal)
+        is_portal = any(k in final_url for k in ['corefacilities.org', 'schedules', 'cas/login', 'software']) or \
+                    any(k in html for k in ['asurite sign in', 'schedule an appointment', 'reserve this room'])
 
         if is_portal:
             status = "✅ 直達入口"
@@ -48,4 +61,4 @@ for item in all_resources:
         print(f"{'❌ 失敗':<10} | {item['file']:<22} | {item['name'][:30]:<32} | 連線異常: {str(e)[:35]}")
 
 print("-" * 105)
-print(f"🏁 檢測完成！共有 {needs_fix} 筆資源仍停留在普通文章/介紹頁，需要換成直達入口。\n")
+print(f"🏁 檢測完成！共有 {needs_fix} 筆資源仍為普通文章/介紹頁。\n")
