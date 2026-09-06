@@ -128,19 +128,7 @@ export const engineeringResources = [
     cost: "Free with Project Approval",
     eligibility: "Fulton Capstone & Lab Students",
     prerequisites: "Machine Shop Hands-on Safety Certification Required",
-    direct_url: "https://students.engineering.asu.edu/machine-shop/",
-    tags: "cnc, mill, lathe, metalworking, machine shop, erc, capstone"
-  },
-  {
-    name: "Fulton Student Machine Shop (CNC & Lathes)",
-    college: "Fulton Schools of Engineering",
-    campus: "Tempe",
-    location: "Engineering Center Central (ERC 160)",
-    system_type: "Specialized Training",
-    cost: "Free with Project Approval",
-    eligibility: "Fulton Capstone & Lab Students",
-    prerequisites: "Machine Shop Hands-on Safety Certification Required",
-    direct_url: "https://students.engineering.asu.edu/machine-shop/",
+    direct_url: "https://lib.asu.edu/makerspace",
     tags: "cnc, mill, lathe, metalworking, machine shop, erc, capstone"
   },
   {
