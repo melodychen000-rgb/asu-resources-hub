@@ -8,7 +8,7 @@ export const artsAndMediaResources = [
     cost: "Free",
     eligibility: "Music Majors & Secondary Music Students",
     prerequisites: "Music Building Keycard Clearance",
-    direct_url: "https://musicdancetheatre.asu.edu/",
+    direct_url: "https://musicdancetheatre.asu.edu/about/facilities",
     tags: "piano, steinway, practice rooms, music, acoustic, herberger, tempe"
   },
   {
@@ -20,7 +20,7 @@ export const artsAndMediaResources = [
     cost: "Free for Enrolled Courses",
     eligibility: "Film, Sound & Media Enrolled Students",
     prerequisites: "Audio Production Safety Training",
-    direct_url: "https://musicdancetheatre.asu.edu/",
+    direct_url: "https://musicdancetheatre.asu.edu/about/facilities",
     tags: "recording studio, audio engineering, mixing, foley, pro tools, music"
   },
   {
@@ -32,7 +32,7 @@ export const artsAndMediaResources = [
     cost: "Free / Material Dependent",
     eligibility: "Design & Architecture Students",
     prerequisites: "HIDA Shop Red Badge Safety Card",
-    direct_url: "https://design.asu.edu/",
+    direct_url: "https://design.asu.edu/resources/fabrication-labs",
     tags: "wood shop, table saw, router, sander, industrial design, architecture, herberger"
   },
   {
@@ -56,7 +56,7 @@ export const artsAndMediaResources = [
     cost: "Free for Course Credit",
     eligibility: "Cronkite News Enrolled Students",
     prerequisites: "Studio Tech Certification",
-    direct_url: "https://cronkite.asu.edu/",
+    direct_url: "https://cronkite.asu.edu/about/policies/equipment",
     tags: "tv studio, newsroom, switcher, teleprompter, broadcast studio, cronkite"
   }
 ];
