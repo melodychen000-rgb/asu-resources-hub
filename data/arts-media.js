@@ -58,7 +58,7 @@ export const artsAndMediaResources = [
     prerequisites: "Studio Tech Certification",
     direct_url: "https://cronkite.asu.edu/about/policies/equipment",
     tags: "tv studio, newsroom, switcher, teleprompter, broadcast studio, cronkite"
-  }
+  },
   {
     name: "Field Audio Kits (Wireless Lavs & Boom Mics)",
     college: "Walter Cronkite School of Journalism",
@@ -166,5 +166,65 @@ export const artsAndMediaResources = [
     prerequisites: "Print Order Submission + Student Account Charge",
     direct_url: "https://lib.asu.edu/makerspace",
     tags: "plotter, large format print, drafting, posters, herberger"
+  },
+  {
+    name: "Professional Teleprompter Rigs",
+    college: "Walter Cronkite School of Journalism",
+    campus: "Downtown",
+    location: "Cronkite Studios",
+    system_type: "Specialized Training",
+    cost: "Free for Majors",
+    eligibility: "Broadcast Anchoring Course Students",
+    prerequisites: "Studio Tech Instructor Authorization",
+    direct_url: "https://cronkite.asu.edu/about/policies/equipment",
+    tags: "teleprompter, studio, news anchor, broadcast, cronkite"
+  },
+  {
+    name: "LiveU Mobile Field Broadcast Transmission Units",
+    college: "Walter Cronkite School of Journalism",
+    campus: "Downtown",
+    location: "Cronkite Equipment Desk",
+    system_type: "Checkout",
+    cost: "Free for Course",
+    eligibility: "Advanced News Reporting Students",
+    prerequisites: "Live Broadcast Certification + Faculty Sign-off",
+    direct_url: "https://cronkite.asu.edu/about/policies/equipment",
+    tags: "liveu, cellular bonding, live broadcast, journalism, cronkite"
+  },
+  {
+    name: "Organ Practice Hall & Pipe Organ Chambers",
+    college: "Herberger (Music)",
+    campus: "Tempe",
+    location: "Organ Hall",
+    system_type: "Specialized Access",
+    cost: "Free for Majors",
+    eligibility: "Organ Performance Students",
+    prerequisites: "Faculty Personal Clearance Required",
+    direct_url: "https://lib.asu.edu/makerspace/services/tech-lending",
+    tags: "organ, pipe organ, music hall, classical, herberger"
+  },
+  {
+    name: "Instrument Lending Locker (Cellos, Horns, Percussion)",
+    college: "Herberger (Music)",
+    campus: "Tempe",
+    location: "Music Building Basement",
+    system_type: "Checkout",
+    cost: "Semester Rental",
+    eligibility: "Music Ensemble Participants",
+    prerequisites: "Semester Instrument Rental Contract Signed",
+    direct_url: "https://lib.asu.edu/makerspace/services/tech-lending",
+    tags: "instrument checkout, cello, brass, woodwinds, herberger"
+  },
+  {
+    name: "ETC Ion/Eos Theatrical Lighting Console",
+    college: "Herberger (Theatre)",
+    campus: "Tempe",
+    location: "Galvin Playhouse",
+    system_type: "Specialized Training",
+    cost: "Free for Production",
+    eligibility: "Theatre Production Students",
+    prerequisites: "Production Technical Director Oversight",
+    direct_url: "https://lib.asu.edu/makerspace/services/tech-lending",
+    tags: "lighting console, etc ion, theatrical lighting, stage, herberger"
   }
 ];
