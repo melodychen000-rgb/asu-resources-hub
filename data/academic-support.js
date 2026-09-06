@@ -56,7 +56,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All ASU Online & Immersion Students",
     prerequisites: "Log in with ASURITE to schedule video session",
-    direct_url: "https://tutoring.asu.edu/student-services/online-tutoring",
+    direct_url: "https://tutoring.asu.edu/writing-centers",
     tags: "writing center, online, zoom, remote, paper review, graduate, undergrad"
   },
   {
@@ -80,7 +80,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All Students taking Math, Chem, Bio, Physics",
     prerequisites: "Walk-in with Sun Card; check live roster online",
-    direct_url: "https://tutoring.asu.edu/",
+    direct_url: "https://tutoring.asu.edu/writing-centers",
     tags: "math, calculus, algebra, statistics, chemistry, biology, psh, tempe, asn, free"
   },
   {
@@ -92,7 +92,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "Students enrolled in targeted high-challenge courses",
     prerequisites: "Peer-led group study sessions scheduled weekly",
-    direct_url: "https://tutoring.asu.edu/",
+    direct_url: "https://tutoring.asu.edu/writing-centers",
     tags: "si, supplemental instruction, study group, calculus, chemistry, biology, peer review"
   },
   {
@@ -140,7 +140,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All ASU Students",
     prerequisites: "Reserve time slot via LibCal + Sun Card Check-in",
-    direct_url: "https://libcal.asu.edu/reserve/spaces",
+    direct_url: "https://asu.libcal.com/reserve/spaces",
     tags: "podcast, audio recording, microphone, soundproof, voiceover, libcal, hayden"
   },
   {
@@ -152,7 +152,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All ASU Students",
     prerequisites: "LibCal Studio Reservation",
-    direct_url: "https://libcal.asu.edu/reserve/spaces",
+    direct_url: "https://asu.libcal.com/reserve/spaces",
     tags: "video studio, green screen, 4k recording, lighting, libcal, noble"
   },
   {
@@ -176,7 +176,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All ASU Students",
     prerequisites: "Book up to 3 hours per day via LibCal with ASURITE",
-    direct_url: "https://libcal.asu.edu/reserve/spaces",
+    direct_url: "https://asu.libcal.com/reserve/spaces",
     tags: "study room, group study, quiet room, whiteboard, libcal, library"
   },
   {
@@ -188,7 +188,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "Enrolled Fee-Paying Students",
     prerequisites: "Complete Safety Waiver + Sun Card Entry",
-    direct_url: "https://fitness.asu.edu/",
+    direct_url: "https://fitness.asu.edu/facilities",
     tags: "rock climbing, bouldering, belay, fitness, recreation, sdfc, tempe"
   },
   {
