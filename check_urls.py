@@ -13,72 +13,104 @@ for file in sorted(os.listdir(DATA_DIR)):
             content = f.read()
             matches = url_pattern.findall(content)
             for name, url in matches:
-                all_resources.append({"file": file, "name": name.strip(), "url": url.strip()})
+                all_resources.append({
+                    "file": file,
+                    "name": name.strip(),
+                    "url": url.strip()
+                })
 
-print(f"\n🔍 掃描到 {len(all_resources)} 筆資源，開始真實網頁可用性診斷...\n")
-print(f"{'狀態':<10} | {'檔案來源':<22} | {'資源名稱':<30} | 說明 / 最終網址")
-print("-" * 110)
+print(f"\n🔍 掃描到 {len(all_resources)} 筆資源，開始真實頁面狀態驗證...\n")
+print(f"{'狀態':<12} | {'檔案來源':<22} | {'資源名稱':<28} | 檢驗詳情 / 最終抵達網址")
+print("-" * 115)
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9"
 }
 
-# ASU 軟性 404 (Soft 404) 的特徵字串
-NOT_FOUND_SIGNALS = [
+# ASU 常見的 404 / 錯誤內文字串
+SOFT_404_PATTERNS = [
     "hmm, we can't find that page",
+    "we can't find that page",
     "page not found",
     "the requested page could not be found",
     "error 404",
     "404 not found",
     "access denied",
-    "dns_probe_finished_nxdomain"
+    "site not found"
 ]
 
-broken_count = 0
-portal_count = 0
+valid_portal_count = 0
+info_page_count = 0
+failed_count = 0
 
 for item in all_resources:
     raw_url = item["url"]
+    file_name = item["file"]
+    res_name = item["name"][:26]
 
-    # 格式防呆
-    if not raw_url.startswith("http"):
-        print(f"{'❌ 格式無效':<10} | {item['file']:<22} | {item['name'][:28]:<30} | 網址格式錯誤: {raw_url}")
-        broken_count += 1
+    # 1. 基本格式過濾
+    if not raw_url.startswith("http://") and not raw_url.startswith("https://"):
+        print(f"{'❌ 格式損毀':<12} | {file_name:<22} | {res_name:<28} | 網址非有效 HTTP(S): {raw_url}")
+        failed_count += 1
         continue
 
-    # LibCal 直接保留官方預約驗證
-    if "libcal.asu.edu/reserve" in raw_url:
-        print(f"{'✅ 直達預約':<10} | {item['file']:<22} | {item['name'][:28]:<30} | [LibCal 預約時段表] {raw_url}")
-        portal_count += 1
+    # 2. 避免已知的無效子網域直接通過
+    if "asu.trac.cloud" in raw_url:
+        print(f"{'❌ 無效網域':<12} | {file_name:<22} | {res_name:<28} | [NXDOMAIN] asu.trac.cloud 不存在")
+        failed_count += 1
         continue
 
-    try:
-        resp = requests.get(raw_url, headers=headers, timeout=12, allow_redirects=True)
-        final_url = resp.url.lower()
-        html = resp.text.lower()
-
-        # 1. 檢查是否為死鏈或軟性 404
-        if resp.status_code >= 400 or any(sig in html for sig in NOT_FOUND_SIGNALS):
-            print(f"{'❌ 找不到網頁':<10} | {item['file']:<22} | {item['name'][:28]:<30} | (404/失效) {resp.url}")
-            broken_count += 1
+    # 3. LibCal 專屬路徑檢查（避免 /r 壞掉）
+    if "libcal.asu.edu" in raw_url:
+        if raw_url.rstrip("/").endswith("/r"):
+            print(f"{'❌ 路徑不全':<12} | {file_name:<22} | {res_name:<28} | LibCal /r 縮寫路徑無效: {raw_url}")
+            failed_count += 1
+            continue
+        elif "reserve" in raw_url:
+            print(f"{'✅ 直達預約':<12} | {file_name:<22} | {res_name:<28} | [LibCal 預約表] {raw_url}")
+            valid_portal_count += 1
             continue
 
-        # 2. 檢查是否為直達預約或查詢入口
-        is_portal = any(k in final_url for k in ['corefacilities.org', 'tutoring', 'schedule', 'software', 'makerspace', 'reserve']) or \
-                    any(k in html for k in ['asurite', 'sign in', 'schedule an appointment', 'reserve'])
+    # 4. 發起真實請求檢驗
+    try:
+        resp = requests.get(raw_url, headers=headers, timeout=10, allow_redirects=True)
+        final_url = resp.url.lower()
+        html_lower = resp.text.lower()
+
+        # 狀態碼異常
+        if resp.status_code >= 400:
+            print(f"{'❌ HTTP錯誤':<12} | {file_name:<22} | {res_name:<28} | [{resp.status_code}] {resp.url}")
+            failed_count += 1
+            continue
+
+        # 檢查是否為 ASU 軟性 404
+        if any(sig in html_lower for sig in SOFT_404_PATTERNS):
+            print(f"{'❌ 404死鏈':<12} | {file_name:<22} | {res_name:<28} | (ASU 找不到此頁面) {resp.url}")
+            failed_count += 1
+            continue
+
+        # 檢查是否具備直達/服務入口特徵
+        is_portal = any(term in final_url for term in ['corefacilities.org', 'tutoring', 'schedule', 'makerspace', 'reserve']) or \
+                    any(kw in html_lower for kw in ['asurite', 'sign in', 'schedule an appointment', 'reserve a space', 'book appointment'])
 
         if is_portal:
-            status = "✅ 直達入口"
-            portal_count += 1
+            print(f"{'✅ 直達入口':<12} | {file_name:<22} | {res_name:<28} | {resp.url}")
+            valid_portal_count += 1
         else:
-            status = "⚠️ 一般介紹頁"
+            print(f"{'⚠️ 一般介紹':<12} | {file_name:<22} | {res_name:<28} | {resp.url}")
+            info_page_count += 1
 
-        print(f"{status:<10} | {item['file']:<22} | {item['name'][:28]:<30} | {resp.url}")
+    except requests.exceptions.ConnectionError:
+        print(f"{'❌ 連線中斷':<12} | {file_name:<22} | {res_name:<28} | 無法連線/主機解析失敗: {raw_url}")
+        failed_count += 1
+    except requests.exceptions.Timeout:
+        print(f"{'❌ 請求超時':<12} | {file_name:<22} | {res_name:<28} | 連線超過 10 秒未回應: {raw_url}")
+        failed_count += 1
+    except Exception as err:
+        print(f"{'❌ 未知異常':<12} | {file_name:<22} | {res_name:<28} | {str(err)[:40]}")
+        failed_count += 1
 
-    except Exception as e:
-        broken_count += 1
-        print(f"{'❌ 連線中斷':<10} | {item['file']:<22} | {item['name'][:28]:<30} | 錯誤: {str(e)[:35]}")
-
-print("-" * 110)
-print(f"🏁 檢測完成！有效直達: {portal_count} 筆 | 失效/找不到: {broken_count} 筆\n")
+print("-" * 115)
+print(f"🏁 檢測完畢：直達入口 {valid_portal_count} 筆 | 一般介紹頁 {info_page_count} 筆 | 失效/死鏈 {failed_count} 筆\n")
