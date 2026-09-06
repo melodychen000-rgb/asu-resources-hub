@@ -92,7 +92,7 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "Fulton Engineering Students",
     prerequisites: "VPN connection + ASURITE license checkout",
-    direct_url: "https://tech.asu.edu/services/campus-it-resources/software",
+    direct_url: "https://lib.asu.edu/makerspace/services/tech-lending",
     tags: "cadence, synopsys, eda, ic layout, virtuoso, vlsi, software, vcl"
   },
   {
@@ -128,7 +128,7 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "Fulton Students with Maker Badge",
     prerequisites: "Online Laser Safety Quiz passed",
-    direct_url: "https://asu.libcal.com/reserve/spaces",
+    direct_url: "https://asu.libcal.com/",
     tags: "laser cutting, acrylic, wood, prototyping, generator lab, ecg"
   },
   {
@@ -152,7 +152,7 @@ export const engineeringResources = [
     cost: "Free Core Allocation for Students",
     eligibility: "All ASU Students, Faculty & Postdocs",
     prerequisites: "Submit Access Request with Faculty Sponsor / Class Allocation",
-    direct_url: "https://cores.research.asu.edu/research-computing",
+    direct_url: "https://cores.research.asu.edu/computing-and-data-services/research-computing/about/",
     tags: "sol, supercomputer, hpc, slurm, linux, gpu, mpi, research computing"
   },
   {
