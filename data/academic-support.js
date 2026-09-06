@@ -212,7 +212,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All Students with SDFC Access",
     prerequisites: "Exchange Sun Card for paddles and balls",
-    direct_url: "https://fitness.asu.edu/programs/intramurals",
+    direct_url: "https://fitness.asu.edu/facilities",
     tags: "table tennis, ping pong, intramural, sports gear, equipment checkout, sdfc"
   }
 ];
