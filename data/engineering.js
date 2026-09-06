@@ -119,7 +119,7 @@ export const engineeringResources = [
     direct_url: "https://lib.asu.edu/makerspace",
     tags: "3d printing, rapid prototyping, pla, resin, filament, generator lab"
   },
-  {
+{
     name: "Fulton Student Machine Shop (CNC & Lathes)",
     college: "Fulton Schools of Engineering",
     campus: "Tempe",
@@ -128,7 +128,7 @@ export const engineeringResources = [
     cost: "Free with Project Approval",
     eligibility: "Fulton Capstone & Lab Students",
     prerequisites: "Machine Shop Hands-on Safety Certification Required",
-    direct_url: "https://lib.asu.edu/makerspace",
+    direct_url: "https://students.engineering.asu.edu/machine-shop/",
     tags: "cnc, mill, lathe, metalworking, machine shop, erc, capstone"
   },
   {
