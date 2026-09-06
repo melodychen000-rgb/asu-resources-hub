@@ -1,62 +1,62 @@
 export const healthLawOtherResources = [
   {
     name: "Bloomberg Professional Service Terminals",
-    college: "W. P. Carey",
+    college: "W. P. Carey School of Business",
     campus: "Tempe",
-    location: "McCord Hall First Floor",
+    location: "Business Administration C-Wing (BAC 101)",
     system_type: "Walk-in",
     cost: "Free",
-    eligibility: "Business Students",
-    prerequisites: "Terminal Booking Reservation + On-site Sign-in",
-    direct_url: "https://wpcarey.asu.edu/about/facilities",
-    tags: "bloomberg terminal, finance, stock market, trading, business, wp carey"
+    eligibility: "All ASU Students (Business/Finance Priority)",
+    prerequisites: "Create Free Bloomberg Account on terminal station",
+    direct_url: "https://wpcarey.asu.edu/",
+    tags: "bloomberg terminal, financial data, stock analysis, finance, economics, wp carey"
   },
   {
-    name: "Physics Department Official Clinic",
-    college: "The College",
+    name: "Physics Department Official Clinic Tutoring",
+    college: "The College of Liberal Arts and Sciences",
     campus: "Tempe",
-    location: "Bateman Physical Sciences F-Wing (PSF 462)",
+    location: "Bateman Physical Sciences F-Wing (PSF 186)",
     system_type: "Walk-in",
     cost: "Free",
     eligibility: "Students taking PHY 101, 111, 112, 121, 131",
-    prerequisites: "Walk-in during TA office hours",
-    direct_url: "https://tutoring.asu.edu/student-services/tutoring-centers",
-    tags: "physics clinic, tutor, tutoring, phy 121, phy 131, mechanics, electromagnetism, physics help"
+    prerequisites: "Walk-in during open clinical TA hours",
+    direct_url: "https://tutoring.asu.edu/",
+    tags: "physics tutor, phy 121, phy 131, mechanics, e&m, clas, physics clinic"
   },
   {
-    name: "ASU Center for Meteorite Studies Vault",
-    college: "The College",
+    name: "ASU Center for Meteorite Studies Collection Vault",
+    college: "The College of Liberal Arts and Sciences",
     campus: "Tempe",
-    location: "ISTB4 2nd Floor",
-    system_type: "Portal",
-    cost: "Free",
-    eligibility: "Authorized Meteorite Researchers",
-    prerequisites: "Curatorial Board Review + Escorted Entry",
-    direct_url: "https://meteorites.asu.edu/",
-    tags: "meteorites, pristine vault, astromaterials, space, istb4"
-  },
-  {
-    name: "SimMan 3G High-Fidelity Patient Simulators",
-    college: "Health",
-    campus: "Downtown",
-    location: "Mercado Building C",
+    location: "Interdisciplinary Science and Technology Building IV (ISTB4)",
     system_type: "Walk-in",
     cost: "Free",
-    eligibility: "Clinical Nursing Students & Instructors",
-    prerequisites: "Clinical Skills Course Roster",
-    direct_url: "https://nursing.asu.edu/about/simulation-centers",
-    tags: "nursing, simulation, simman, healthcare, clinical"
+    eligibility: "All Public & ASU Students",
+    prerequisites: "Open gallery hours / Specialist research appointment",
+    direct_url: "https://meteorites.asu.edu/",
+    tags: "meteorites, space, geology, istb4, science museum, astronomy, planetary"
   },
   {
-    name: "Sandra Day O'Connor Formal Appellate Moot Courtroom",
-    college: "Law",
+    name: "SimMan 3G High-Fidelity Patient Simulator",
+    college: "Edson College of Nursing and Health Innovation",
     campus: "Downtown",
-    location: "Beus Center for Law and Society",
-    system_type: "Portal",
-    cost: "Free",
-    eligibility: "Law Students & Mock Trial Teams",
-    prerequisites: "Law School Event Coordinator Scheduling",
+    location: "Mercado Building C (Grace Center)",
+    system_type: "Specialized Training",
+    cost: "Free for Enrolled Clinicals",
+    eligibility: "Nursing & Health Innovation Students",
+    prerequisites: "Scheduled Clinical Simulation Lab",
+    direct_url: "https://nursingandhealth.asu.edu/about/grace-centers-simulation-lab",
+    tags: "simman, patient simulator, nursing, clinical skills, healthcare, downtown"
+  },
+  {
+    name: "Sandra Day O'Connor College of Law Legal Clinic Support",
+    college: "Sandra Day O'Connor College of Law",
+    campus: "Downtown",
+    location: "Beus Center for Law and Society (BCLS)",
+    system_type: "Walk-in / Contact",
+    cost: "Free Public Legal Help",
+    eligibility: "ASU Students & Community Qualifying Members",
+    prerequisites: "Intake form & qualification check",
     direct_url: "https://law.asu.edu/",
-    tags: "moot court, law, mock trial, downtown, courtroom"
+    tags: "legal clinic, civil justice, patent clinic, trademark, legal aid, law school"
   }
 ];
