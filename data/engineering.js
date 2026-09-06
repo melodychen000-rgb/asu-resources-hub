@@ -95,7 +95,7 @@ export const engineeringResources = [
     direct_url: "https://lib.asu.edu/makerspace/services/tech-lending",
     tags: "cadence, synopsys, eda, ic layout, virtuoso, vlsi, software, vcl"
   },
-  {
+ {
     name: "Fulton Innovation Hub - PCB Milling & Soldering Stations",
     college: "Fulton Schools of Engineering",
     campus: "Tempe",
@@ -104,7 +104,7 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "Fulton Students",
     prerequisites: "Complete Basic Lab Safety Training on Canvas",
-    direct_url: "https://generatorlabs.engineering.asu.edu/",
+    direct_url: "https://lib.asu.edu/makerspace",
     tags: "pcb milling, soldering, circuits, hardware, breadboard, ecg"
   },
   {
@@ -116,20 +116,20 @@ export const engineeringResources = [
     cost: "Free / Material Cost",
     eligibility: "All Fulton Students",
     prerequisites: "Orientation & Safety Badge",
-    direct_url: "https://generatorlabs.engineering.asu.edu/",
+    direct_url: "https://lib.asu.edu/makerspace",
     tags: "3d printing, rapid prototyping, pla, resin, filament, generator lab"
   },
   {
-    name: "Fulton Generator Labs - Laser Cutters & Engravers",
+    name: "Fulton Student Machine Shop (CNC & Lathes)",
     college: "Fulton Schools of Engineering",
     campus: "Tempe",
-    location: "Engineering Center G-Wing (ECG 101)",
-    system_type: "LibCal / Walk-in",
-    cost: "Free",
-    eligibility: "Fulton Students with Maker Badge",
-    prerequisites: "Online Laser Safety Quiz passed",
-    direct_url: "https://asu.libcal.com/",
-    tags: "laser cutting, acrylic, wood, prototyping, generator lab, ecg"
+    location: "Engineering Center Central (ERC 160)",
+    system_type: "Specialized Training",
+    cost: "Free with Project Approval",
+    eligibility: "Fulton Capstone & Lab Students",
+    prerequisites: "Machine Shop Hands-on Safety Certification Required",
+    direct_url: "https://lib.asu.edu/makerspace",
+    tags: "cnc, mill, lathe, metalworking, machine shop, erc, capstone"
   },
   {
     name: "Fulton Student Machine Shop (CNC & Lathes)",
