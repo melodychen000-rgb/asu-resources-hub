@@ -104,7 +104,7 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "Fulton Students",
     prerequisites: "Complete Basic Lab Safety Training on Canvas",
-    direct_url: "https://lib.asu.edu/makerspace",
+    direct_url: "https://generatorlabs.engineering.asu.edu/",
     tags: "pcb milling, soldering, circuits, hardware, breadboard, ecg"
   },
   {
@@ -116,7 +116,7 @@ export const engineeringResources = [
     cost: "Free / Material Cost",
     eligibility: "All Fulton Students",
     prerequisites: "Orientation & Safety Badge",
-    direct_url: "https://lib.asu.edu/makerspace",
+    direct_url: "https://generatorlabs.engineering.asu.edu/",
     tags: "3d printing, rapid prototyping, pla, resin, filament, generator lab"
   },
   {
@@ -140,7 +140,7 @@ export const engineeringResources = [
     cost: "Free with Project Approval",
     eligibility: "Fulton Capstone & Lab Students",
     prerequisites: "Machine Shop Hands-on Safety Certification Required",
-    direct_url: "https://lib.asu.edu/makerspace",
+    direct_url: "https://students.engineering.asu.edu/machine-shop/",
     tags: "cnc, mill, lathe, metalworking, machine shop, erc, capstone"
   },
   {
@@ -152,7 +152,7 @@ export const engineeringResources = [
     cost: "Free Core Allocation for Students",
     eligibility: "All ASU Students, Faculty & Postdocs",
     prerequisites: "Submit Access Request with Faculty Sponsor / Class Allocation",
-    direct_url: "https://cores.research.asu.edu/computing-and-data-services/research-computing/about/",
+    direct_url: "https://cores.research.asu.edu/research-computing",
     tags: "sol, supercomputer, hpc, slurm, linux, gpu, mpi, research computing"
   },
   {
@@ -164,7 +164,7 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "Students enrolled in approved CS/AI coursework",
     prerequisites: "Instructor requested allocation",
-    direct_url: "https://cores.research.asu.edu/computing-and-data-services/research-computing/about/",
+    direct_url: "https://scai.engineering.asu.edu/research/facilities/",
     tags: "gpu, pytorch, tensorflow, deep learning, ai, scai, cluster"
   }
 ];
