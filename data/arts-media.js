@@ -59,4 +59,112 @@ export const artsAndMediaResources = [
     direct_url: "https://cronkite.asu.edu/about/policies/equipment",
     tags: "tv studio, newsroom, switcher, teleprompter, broadcast studio, cronkite"
   }
+  {
+    name: "Field Audio Kits (Wireless Lavs & Boom Mics)",
+    college: "Walter Cronkite School of Journalism",
+    campus: "Downtown",
+    location: "Cronkite Building (Room 608)",
+    system_type: "Equipment Reservation",
+    cost: "Free",
+    eligibility: "Cronkite Journalism Majors",
+    prerequisites: "Equipment Lab Online Reservation",
+    direct_url: "https://cronkite.asu.edu/about/policies/equipment",
+    tags: "audio, lavalier, boom mic, journalism, sound, cronkite"
+  },
+  {
+    name: "Soundproof Audio & Podcast Recording Booths",
+    college: "Walter Cronkite School of Journalism",
+    campus: "Downtown",
+    location: "Cronkite Building 3F",
+    system_type: "LibCal / Room Booking",
+    cost: "Free",
+    eligibility: "Journalism & Media Students",
+    prerequisites: "Online Room Booking System",
+    direct_url: "https://asu.libcal.com/",
+    tags: "podcast, audio booth, voiceover, soundproof, cronkite"
+  },
+  {
+    name: "Film & TV Production Lighting Kits (Arri/LED)",
+    college: "Walter Cronkite School of Journalism",
+    campus: "Downtown",
+    location: "Cronkite Building (Room 608)",
+    system_type: "Walk-in",
+    cost: "Free",
+    eligibility: "Cronkite Video Production Students",
+    prerequisites: "Equipment Liability Form + Barcode Checkout",
+    direct_url: "https://cronkite.asu.edu/about/policies/equipment",
+    tags: "lighting, arri, led panels, grip, production, cronkite"
+  },
+  {
+    name: "Video Editing Suites (Avid / Premiere Pro)",
+    college: "Walter Cronkite School of Journalism",
+    campus: "Downtown",
+    location: "Cronkite Edit Labs",
+    system_type: "Walk-in",
+    cost: "Free",
+    eligibility: "Enrolled Media Students",
+    prerequisites: "ASURITE Access on Specific Workstations",
+    direct_url: "https://cronkite.asu.edu/about/policies/equipment",
+    tags: "premiere pro, avid, editing suite, color grading, cronkite"
+  },
+  {
+    name: "Ceramics Electric Kilns & Pottery Wheels",
+    college: "Herberger (Art)",
+    campus: "Tempe",
+    location: "Ceramics Building",
+    system_type: "Specialized Training",
+    cost: "Lab Fee Dependent",
+    eligibility: "Ceramics Enrolled Students",
+    prerequisites: "Glaze & Clay Safety Orientation + Firing Log",
+    direct_url: "https://lib.asu.edu/makerspace",
+    tags: "ceramics, kiln, pottery, clay, sculpture, herberger"
+  },
+  {
+    name: "Digital TC2 Jacquard Loom & Embroidery Machines",
+    college: "Herberger (Art)",
+    campus: "Tempe",
+    location: "Art Building Textile Studio",
+    system_type: "Specialized Training",
+    cost: "Free",
+    eligibility: "Fiber & Textile Students",
+    prerequisites: "Textile Studio Tech Certification",
+    direct_url: "https://lib.asu.edu/makerspace",
+    tags: "loom, embroidery, textiles, fiber arts, digital craft, herberger"
+  },
+  {
+    name: "Darkroom Wet Photography & Film Scanners",
+    college: "Herberger (Art)",
+    campus: "Tempe",
+    location: "Art Building 3F",
+    system_type: "Specialized Training",
+    cost: "Free",
+    eligibility: "Photography Majors & Course Students",
+    prerequisites: "Chemical Waste Handling Protocol + Key Sign-out",
+    direct_url: "https://lib.asu.edu/makerspace",
+    tags: "darkroom, film scanning, photography, chemicals, herberger"
+  },
+  {
+    name: "Green Screen Cyclorama Studio",
+    college: "Herberger (FMP)",
+    campus: "Tempe",
+    location: "Stauffer Hall Communication B",
+    system_type: "Studio Reservation",
+    cost: "Free",
+    eligibility: "Film & Media Production Majors",
+    prerequisites: "Project Proposal Submission & Approval",
+    direct_url: "https://asu.libcal.com/",
+    tags: "green screen, cyc wall, film production, studio, herberger"
+  },
+  {
+    name: "Large Format Fine Art Plotter Printers",
+    college: "Herberger (Design)",
+    campus: "Tempe",
+    location: "Design North Print Lab",
+    system_type: "Walk-in Service",
+    cost: "Student Account Charge",
+    eligibility: "Herberger Enrolled Students",
+    prerequisites: "Print Order Submission + Student Account Charge",
+    direct_url: "https://lib.asu.edu/makerspace",
+    tags: "plotter, large format print, drafting, posters, herberger"
+  }
 ];
