@@ -1,5 +1,5 @@
 export const academicSupportResources = [
-  // --- 寫作中心 (Writing Centers) 各校區直達 ---
+  // --- 寫作中心 (Writing Centers) 直達 TracCloud 預約入口 ---
   {
     name: "ASU Writing Center - Tempe (Noble Library)",
     college: "Academic Support Network",
@@ -8,8 +8,8 @@ export const academicSupportResources = [
     system_type: "TutorSearch",
     cost: "Free",
     eligibility: "All ASU Undergrad & Graduate Students",
-    prerequisites: "Book 1-on-1 session via TracCloud or Walk-in",
-    direct_url: "https://tutoring.asu.edu/student-services/writing-centers",
+    prerequisites: "Log in with ASURITE to book 1-on-1 session or check walk-in",
+    direct_url: "https://asu.trac.cloud/",
     tags: "writing center, tutor, tutoring, essay, paper, proofreading, noble library, tempe"
   },
   {
@@ -20,8 +20,8 @@ export const academicSupportResources = [
     system_type: "TutorSearch",
     cost: "Free",
     eligibility: "All Downtown & Immersion Students",
-    prerequisites: "1-on-1 Appointment or Walk-in",
-    direct_url: "https://tutoring.asu.edu/student-services/writing-centers",
+    prerequisites: "Log in with ASURITE to book 1-on-1 session",
+    direct_url: "https://asu.trac.cloud/",
     tags: "writing center, downtown, ucent, journalism, nursing, paper, essay, tutor"
   },
   {
@@ -32,8 +32,8 @@ export const academicSupportResources = [
     system_type: "TutorSearch",
     cost: "Free",
     eligibility: "All Polytechnic Enrolled Students",
-    prerequisites: "Book on TracCloud or Walk-in",
-    direct_url: "https://tutoring.asu.edu/student-services/writing-centers",
+    prerequisites: "Log in with ASURITE to book 1-on-1 session",
+    direct_url: "https://asu.trac.cloud/",
     tags: "writing center, polytechnic, technical writing, paper, cntr, tutor"
   },
   {
@@ -44,32 +44,32 @@ export const academicSupportResources = [
     system_type: "TutorSearch",
     cost: "Free",
     eligibility: "All West Valley Enrolled Students",
-    prerequisites: "Drop-in or TracCloud booking",
-    direct_url: "https://tutoring.asu.edu/student-services/writing-centers",
+    prerequisites: "Log in with ASURITE to book 1-on-1 session",
+    direct_url: "https://asu.trac.cloud/",
     tags: "writing center, west campus, fletcher library, essay, tutor"
   },
   {
     name: "ASU Online Live 1-on-1 Writing Tutoring (Zoom)",
     college: "Academic Support Network",
-    campus: "Online",
+    campus: "All Campuses / Online",
     location: "Virtual Room via Zoom / TracCloud",
     system_type: "TutorSearch",
     cost: "Free",
     eligibility: "All ASU Online & Immersion Students",
     prerequisites: "Log in with ASURITE on TracCloud to schedule video session",
-    direct_url: "https://tutoring.asu.edu/student-services/online-tutoring",
+    direct_url: "https://asu.trac.cloud/",
     tags: "writing center, online, zoom, remote, paper review, graduate, undergrad"
   },
   {
     name: "Graduate Student Writing & Thesis Consultations",
     college: "Academic Support Network",
-    campus: "Tempe / Online",
+    campus: "All Campuses / Online",
     location: "Noble Library 280 / Zoom Virtual",
     system_type: "TutorSearch",
     cost: "Free",
     eligibility: "Master's & PhD Students",
     prerequisites: "Dedicated Graduate Specialist booking via TracCloud",
-    direct_url: "https://tutoring.asu.edu/student-services/graduate-students",
+    direct_url: "https://asu.trac.cloud/",
     tags: "graduate, thesis, dissertation, research proposal, phd, masters, academic writing"
   },
 
@@ -83,7 +83,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All Students taking Math, Chem, Bio, Physics",
     prerequisites: "Walk-in with Sun Card; check live roster online",
-    direct_url: "https://tutoring.asu.edu/student-services/math-science-tutoring",
+    direct_url: "https://tutoring.asu.edu/schedules",
     tags: "math, calculus, algebra, statistics, chemistry, biology, psh, tempe, asn, free"
   },
   {
@@ -95,23 +95,23 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "Students enrolled in targeted high-challenge courses",
     prerequisites: "Peer-led group study sessions scheduled weekly",
-    direct_url: "https://tutoring.asu.edu/student-services/supplemental-instruction",
+    direct_url: "https://tutoring.asu.edu/schedules",
     tags: "si, supplemental instruction, study group, calculus, chemistry, biology, peer review"
   },
   {
     name: "Student Success Academic Skills & Time-Management Coaching",
     college: "Academic Support Network",
-    campus: "Tempe / Online",
+    campus: "All Campuses / Online",
     location: "Student Success Center / Virtual Zoom",
     system_type: "TutorSearch",
     cost: "Free",
     eligibility: "All Enrolled Undergraduate Students",
     prerequisites: "1-on-1 Success Coach Booking via TracCloud",
-    direct_url: "https://tutoring.asu.edu/student-services/academic-mentoring",
+    direct_url: "https://asu.trac.cloud/",
     tags: "academic coaching, time management, study habits, exam prep, mentoring, success coach"
   },
 
-  // --- 圖書館創客空間與科技借用 (Library Tech & Studios) ---
+  // --- 圖書館創客空間、預約與科技借用 (Library Tech & Studios) ---
   {
     name: "Hayden Library Makerspace (3D Printers & Laser Cutter)",
     college: "ASU Library",
@@ -145,7 +145,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All ASU Students",
     prerequisites: "Reserve time slot via LibCal + Sun Card Check-in",
-    direct_url: "https://libcal.asu.edu/reserve/hayden-audio",
+    direct_url: "https://libcal.asu.edu/r",
     tags: "podcast, audio recording, microphone, soundproof, voiceover, libcal, hayden"
   },
   {
@@ -157,13 +157,13 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All ASU Students",
     prerequisites: "LibCal Studio Reservation",
-    direct_url: "https://libcal.asu.edu/reserve/noble-video",
+    direct_url: "https://libcal.asu.edu/r",
     tags: "video studio, green screen, 4k recording, lighting, libcal, noble"
   },
   {
     name: "ASU Library Technology Device Checkout (Laptops & Hotspots)",
     college: "ASU Library",
-    campus: "Tempe / All",
+    campus: "All Campuses / Online",
     location: "Library Information & Check-out Desks (All Campuses)",
     system_type: "Walk-in",
     cost: "Free",
@@ -175,17 +175,17 @@ export const academicSupportResources = [
   {
     name: "Library Study Room Reservation Portal (All Campuses)",
     college: "ASU Library",
-    campus: "Tempe / All",
+    campus: "All Campuses / Online",
     location: "Hayden, Noble, Fletcher, Downtown & Poly Libraries",
     system_type: "LibCal",
     cost: "Free",
     eligibility: "All ASU Students",
     prerequisites: "Book up to 3 hours per day via LibCal with ASURITE",
-    direct_url: "https://libcal.asu.edu/reserve/studyrooms",
+    direct_url: "https://libcal.asu.edu/r",
     tags: "study room, group study, quiet room, whiteboard, libcal, library"
   },
 
-  // --- 健身中心與課外支持 (SDFC) ---
+  // --- 健身中心與體育設施 (SDFC) ---
   {
     name: "SDFC Bouldering & Top-Rope Climbing Wall",
     college: "SDFC",
