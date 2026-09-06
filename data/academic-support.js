@@ -107,7 +107,7 @@ export const academicSupportResources = [
     direct_url: "https://tutoring.asu.edu/writing-centers",
     tags: "academic coaching, time management, study habits, exam prep, mentoring, success coach"
   },
-  {
+ {
     name: "Hayden Library Makerspace (3D Printers & Laser Cutter)",
     college: "ASU Library",
     campus: "Tempe",
