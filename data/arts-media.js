@@ -1,4 +1,4 @@
-export const artsMediaResources = [
+export const artsAndMediaResources = [
   {
     name: "Steinway Grand Piano Practice Rooms",
     college: "Herberger Institute for Design and the Arts",
