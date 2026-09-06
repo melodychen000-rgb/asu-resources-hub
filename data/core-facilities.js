@@ -83,4 +83,112 @@ export const coreFacilitiesResources = [
     direct_url: "https://asu.corefacilities.org/",
     tags: "cryo-tem, cryo-em, structural biology, protein imaging"
   }
+  {
+    name: "Single-Crystal X-Ray Diffractometer (SC-XRD)",
+    college: "Core Facilities",
+    campus: "Tempe",
+    location: "Goldwater Center (GWC)",
+    system_type: "iLab",
+    cost: "Hourly Rate via iLab",
+    eligibility: "Structural Crystallography Researchers",
+    prerequisites: "Crystal Analysis Request + PI SpeedType",
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "sc-xrd, crystallography, x-ray, molecular structure, core facilities"
+  },
+  {
+    name: "Liquid Nitrogen & Helium Refill Dispensing Station",
+    college: "Core Facilities",
+    campus: "Tempe",
+    location: "Physical Sciences Basement",
+    system_type: "Key Card Meter",
+    cost: "Recharge Account",
+    eligibility: "Qualified Lab Researchers",
+    prerequisites: "Cryogenic Safety Certification + Key Card Meter",
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "liquid nitrogen, helium, cryogenics, refill, physical sciences"
+  },
+  {
+    name: "High-Resolution Q-TOF Mass Spectrometer",
+    college: "Core Facilities",
+    campus: "Tempe",
+    location: "Biodesign Institute A",
+    system_type: "iLab",
+    cost: "Hourly Rate via iLab",
+    eligibility: "Proteomics Researchers",
+    prerequisites: "iLab Registration + Level 1 Autonomy Sign-off",
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "q-tof, proteomics, high resolution mass spec, biodesign"
+  },
+  {
+    name: "Nanoindentation & Micro-Mechanical Test Suite",
+    college: "Core Facilities",
+    campus: "Tempe",
+    location: "Engineering Center F-Wing",
+    system_type: "iLab",
+    cost: "Hourly Rate via iLab",
+    eligibility: "Materials Scientists",
+    prerequisites: "Sample Hardness Form + Stylus Check",
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "nanoindentation, hardness, tribology, mechanics, ecf"
+  },
+  {
+    name: "Focused Ion Beam SEM Dual-Beam System (FIB-SEM)",
+    college: "Core Facilities",
+    campus: "Tempe",
+    location: "Bateman Physical Sciences H-Wing",
+    system_type: "iLab",
+    cost: "Hourly Rate via iLab",
+    eligibility: "Nanotechnology Specialists",
+    prerequisites: "Two-Tier FIB Training + 20hr Regular SEM Log",
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "fib, sem, dual beam, nanomachining, tem prep, nano"
+  },
+  {
+    name: "Electron Probe Microanalyzer (EPMA)",
+    college: "SESE / Core Facilities",
+    campus: "Tempe",
+    location: "ISTB4 Ground Level",
+    system_type: "iLab",
+    cost: "Hourly Rate via iLab",
+    eligibility: "Geoscientists & Materials Researchers",
+    prerequisites: "Analytical Project Proposal + Instrument Director",
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "epma, microprobe, mineral analysis, geoscience, istb4"
+  },
+  {
+    name: "Scientific Custom Glassblowing Workshop",
+    college: "SMS / Core Facilities",
+    campus: "Tempe",
+    location: "Bateman Physical Sciences H-Wing",
+    system_type: "Work Order",
+    cost: "Project Billable",
+    eligibility: "University Researchers",
+    prerequisites: "Custom Glass Fabrication Work Order Request",
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "glassblowing, quartz, scientific glassware, chemistry"
+  },
+  {
+    name: "Fluorescence Activated Cell Sorter (FACS)",
+    college: "SOLS / Core Facilities",
+    campus: "Tempe",
+    location: "Life Sciences A-Wing",
+    system_type: "iLab",
+    cost: "Hourly Rate via iLab",
+    eligibility: "Trained Biological Researchers",
+    prerequisites: "Flow Cytometry Certification + iLab Schedule",
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "flow cytometry, facs, cell sorting, biology, life sciences"
+  },
+  {
+    name: "Thermal Analysis Station (TGA / DSC)",
+    college: "SEMTE / Core Facilities",
+    campus: "Tempe",
+    location: "Engineering Center F-Wing",
+    system_type: "Specialized Training",
+    cost: "Recharge Rate",
+    eligibility: "Materials & Chemistry Researchers",
+    prerequisites: "Sample Data Sheet Submission + Training",
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "tga, dsc, thermal analysis, polymers, semte"
+  }
 ];
