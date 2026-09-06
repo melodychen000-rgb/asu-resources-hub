@@ -32,7 +32,7 @@ export const artsAndMediaResources = [
     cost: "Free / Material Dependent",
     eligibility: "Design & Architecture Students",
     prerequisites: "HIDA Shop Red Badge Safety Card",
-    direct_url: "https://lib.asu.edu/makerspace",
+    direct_url: "https://design.asu.edu/resources/fabrication-labs",
     tags: "wood shop, table saw, router, sander, industrial design, architecture, herberger"
   },
   {
