@@ -58,7 +58,7 @@ export const healthLawOtherResources = [
     prerequisites: "Intake form & qualification check",
     direct_url: "https://tutoring.asu.edu/writing-centers",
     tags: "legal clinic, civil justice, patent clinic, trademark, legal aid, law school"
-  }
+  },
   {
     name: "Financial Markets Capital Simulation Lab",
     college: "W. P. Carey School of Business",
@@ -166,5 +166,101 @@ export const healthLawOtherResources = [
     prerequisites: "IRB Approval Protocol + Lab Manager Booking",
     direct_url: "https://fitness.asu.edu/facilities",
     tags: "motion capture, gait analysis, biomechanics, vicon, istb4"
+  },
+  {
+    name: "High-Density EEG Neurophysiology Suites",
+    college: "Psychology",
+    campus: "Tempe",
+    location: "Psychology Building",
+    system_type: "Specialized Training",
+    cost: "Research Allocated",
+    eligibility: "Cognitive Science Researchers",
+    prerequisites: "Approved IRB Protocol + Consumables Checkout",
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "eeg, brainwaves, cognitive science, neuroscience, psychology"
+  },
+  {
+    name: "Eye-Tracking Observation Suites",
+    college: "Psychology",
+    campus: "Tempe",
+    location: "Psychology Building 2F",
+    system_type: "Calendar Booking",
+    cost: "Free for Lab",
+    eligibility: "Behavioral Science Students",
+    prerequisites: "Lab Calendar Booking + ASURITE ID",
+    direct_url: "https://lib.asu.edu/makerspace/services/tech-lending",
+    tags: "eye tracking, behavioral study, psychology, perception"
+  },
+  {
+    name: "Sound-Attenuated Behavioral Observation Suites",
+    college: "Psychology",
+    campus: "Tempe",
+    location: "Psychology Building",
+    system_type: "Specialized Access",
+    cost: "Free for Lab",
+    eligibility: "Psychology Enrollees & Research Assistants",
+    prerequisites: "Department Electronic Lock Access Approval",
+    direct_url: "https://lib.asu.edu/makerspace/services/tech-lending",
+    tags: "soundproof, observation room, behavioral research, psychology"
+  },
+  {
+    name: "Biosafety Cabinets & Tissue Culture Incubators",
+    college: "SBHSE",
+    campus: "Tempe",
+    location: "Biodesign Institute C",
+    system_type: "Specialized Access",
+    cost: "Research Allocated",
+    eligibility: "Active SBHSE Wet Lab Members",
+    prerequisites: "EH&S Bloodborne Pathogens & Biosafety Protocol",
+    direct_url: "https://lib.asu.edu/makerspace",
+    tags: "cell culture, biosafety cabinet, incubator, bme, biodesign"
+  },
+  {
+    name: "Steam Autoclave Sterilization Suite",
+    college: "SBHSE",
+    campus: "Tempe",
+    location: "Biodesign Institute A",
+    system_type: "Specialized Training",
+    cost: "Free for Lab",
+    eligibility: "Wet Lab Biological Researchers",
+    prerequisites: "Autoclave Safe Handling Course",
+    direct_url: "https://lib.asu.edu/makerspace",
+    tags: "autoclave, sterilization, biohazard, wet lab, biodesign"
+  },
+  {
+    name: "Greenhouse & Climate-Controlled Plant Growth Chambers",
+    college: "SOLS",
+    campus: "Tempe",
+    location: "Life Sciences E-Wing Rooftop",
+    system_type: "Space Allocation",
+    cost: "Research Allocated",
+    eligibility: "Plant Biology Researchers",
+    prerequisites: "USDA Compliance Declaration + Space Allocation",
+    direct_url: "https://cores.research.asu.edu/computing-and-data-services/research-computing/about/",
+    tags: "greenhouse, plant growth, arabidopsis, agriculture, sols"
+  },
+  {
+    name: "High-Performance Climate GIS Workstations",
+    college: "CGF (Global Futures)",
+    campus: "Tempe",
+    location: "Wrigley Hall",
+    system_type: "Software Request",
+    cost: "Free",
+    eligibility: "Sustainability & GIS Students",
+    prerequisites: "GIS Lab Software Request Approval",
+    direct_url: "https://cores.research.asu.edu/computing-and-data-services/research-computing/about/",
+    tags: "gis, climate modeling, esri, sustainability, wrigley"
+  },
+  {
+    name: "DEXA Whole Body Dual-Energy X-Ray Scanner",
+    college: "CHS",
+    campus: "Downtown",
+    location: "Health South Metabolic Unit",
+    system_type: "Specialized Training",
+    cost: "Research / Clinical Allocated",
+    eligibility: "Certified Bone Density Operators",
+    prerequisites: "Radiologic Device Operator State Licensure",
+    direct_url: "https://fitness.asu.edu/facilities",
+    tags: "dexa, bone density, body composition, health, chs"
   }
 ];
