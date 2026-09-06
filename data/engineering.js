@@ -104,7 +104,7 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "Fulton Students",
     prerequisites: "Complete Basic Lab Safety Training on Canvas",
-    direct_url: "https://students.engineering.asu.edu/",
+    direct_url: "https://lib.asu.edu/makerspace",
     tags: "pcb milling, soldering, circuits, hardware, breadboard, ecg"
   },
   {
@@ -140,7 +140,7 @@ export const engineeringResources = [
     cost: "Free with Project Approval",
     eligibility: "Fulton Capstone & Lab Students",
     prerequisites: "Machine Shop Hands-on Safety Certification Required",
-    direct_url: "https://students.engineering.asu.edu/",
+    direct_url: "https://lib.asu.edu/makerspace",
     tags: "cnc, mill, lathe, metalworking, machine shop, erc, capstone"
   },
   {
@@ -164,7 +164,7 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "Students enrolled in approved CS/AI coursework",
     prerequisites: "Instructor requested allocation",
-    direct_url: "https://scai.engineering.asu.edu/",
+    direct_url: "https://cores.research.asu.edu/computing-and-data-services/research-computing/about/",
     tags: "gpu, pytorch, tensorflow, deep learning, ai, scai, cluster"
   }
 ];
