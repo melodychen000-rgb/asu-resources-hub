@@ -140,7 +140,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All ASU Students",
     prerequisites: "Reserve time slot via LibCal + Sun Card Check-in",
-    direct_url: "https://asu.libcal.com/reserve/spaces",
+    direct_url: "https://asu.libcal.com/",
     tags: "podcast, audio recording, microphone, soundproof, voiceover, libcal, hayden"
   },
   {
@@ -152,7 +152,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All ASU Students",
     prerequisites: "LibCal Studio Reservation",
-    direct_url: "https://asu.libcal.com/reserve/spaces",
+    direct_url: "https://asu.libcal.com/",
     tags: "video studio, green screen, 4k recording, lighting, libcal, noble"
   },
   {
@@ -176,7 +176,7 @@ export const academicSupportResources = [
     cost: "Free",
     eligibility: "All ASU Students",
     prerequisites: "Book up to 3 hours per day via LibCal with ASURITE",
-    direct_url: "https://asu.libcal.com/reserve/spaces",
+    direct_url: "https://asu.libcal.com/",
     tags: "study room, group study, quiet room, whiteboard, libcal, library"
   },
   {
