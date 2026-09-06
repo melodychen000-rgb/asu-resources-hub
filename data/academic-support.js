@@ -1,5 +1,5 @@
 export const academicSupportResources = [
-  // --- 寫作中心 (Writing Centers) 直達 TracCloud 預約入口 ---
+  // --- 寫作中心 (Writing Centers) 直達 TracCloud 預約排程 ---
   {
     name: "ASU Writing Center - Tempe (Noble Library)",
     college: "Academic Support Network",
@@ -111,7 +111,7 @@ export const academicSupportResources = [
     tags: "academic coaching, time management, study habits, exam prep, mentoring, success coach"
   },
 
-  // --- 圖書館創客空間、預約與科技借用 (Library Tech & Studios) ---
+  // --- 圖書館創客空間、討論室預約與器材借用 ---
   {
     name: "Hayden Library Makerspace (3D Printers & Laser Cutter)",
     college: "ASU Library",
@@ -185,7 +185,7 @@ export const academicSupportResources = [
     tags: "study room, group study, quiet room, whiteboard, libcal, library"
   },
 
-  // --- 健身中心與體育設施 (SDFC) ---
+  // --- 運動休閒設施 (SDFC) ---
   {
     name: "SDFC Bouldering & Top-Rope Climbing Wall",
     college: "SDFC",
