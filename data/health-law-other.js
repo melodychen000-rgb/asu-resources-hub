@@ -59,4 +59,112 @@ export const healthLawOtherResources = [
     direct_url: "https://tutoring.asu.edu/writing-centers",
     tags: "legal clinic, civil justice, patent clinic, trademark, legal aid, law school"
   }
+  {
+    name: "Financial Markets Capital Simulation Lab",
+    college: "W. P. Carey School of Business",
+    campus: "Tempe",
+    location: "McCord Hall",
+    system_type: "Course Allocation",
+    cost: "Free",
+    eligibility: "Finance Students & Student Investment Funds",
+    prerequisites: "Enrolled in Capital Markets Course / SIM Fund",
+    direct_url: "https://lib.asu.edu/makerspace/services/tech-lending",
+    tags: "trading room, capital markets, investment, finance, wp carey"
+  },
+  {
+    name: "WRDS High-Performance Business Data Service",
+    college: "W. P. Carey School of Business",
+    campus: "All Campuses / Online",
+    location: "Remote / Web Access",
+    system_type: "Portal Registration",
+    cost: "Free",
+    eligibility: "Business Graduate Students & Faculty",
+    prerequisites: "Academic Email Verification + Data Admin Sign-off",
+    direct_url: "https://cores.research.asu.edu/computing-and-data-services/research-computing/about/",
+    tags: "wrds, financial data, compustat, business analytics, wp carey"
+  },
+  {
+    name: "W. P. Carey Graduate Team Study Rooms",
+    college: "W. P. Carey School of Business",
+    campus: "Tempe",
+    location: "McCord Hall",
+    system_type: "EMS Scheduling",
+    cost: "Free",
+    eligibility: "W. P. Carey Enrolled Students",
+    prerequisites: "EMS Scheduling System with Time Limit",
+    direct_url: "https://asu.libcal.com/",
+    tags: "study room, team room, mccord hall, business, wp carey"
+  },
+  {
+    name: "Pyxis MedStation Automated Medication Dispenser",
+    college: "Edson College of Nursing and Health Innovation",
+    campus: "Downtown",
+    location: "Health North Simulation Center",
+    system_type: "Specialized Training",
+    cost: "Free",
+    eligibility: "Nursing Students in Clinical Labs",
+    prerequisites: "Student Biometric Fingerprint + PIN Setup",
+    direct_url: "https://nursingandhealth.asu.edu/about/grace-centers-simulation-lab",
+    tags: "pyxis, pharmacology, nursing lab, medication, downtown"
+  },
+  {
+    name: "Surgical Operating Room Simulation Suite",
+    college: "Edson College of Nursing and Health Innovation",
+    campus: "Downtown",
+    location: "Mercado Simulation Hospital",
+    system_type: "Specialized Training",
+    cost: "Free",
+    eligibility: "Surgical Clinical Students",
+    prerequisites: "Clinical Attire Protocol + Shift Attendance",
+    direct_url: "https://nursingandhealth.asu.edu/about/grace-centers-simulation-lab",
+    tags: "operating room, or, surgical nursing, sterile, downtown"
+  },
+  {
+    name: "VO2 Max Exercise Physiology Metabolic Cart",
+    college: "College of Health Solutions",
+    campus: "Downtown",
+    location: "Health South Building",
+    system_type: "Specialized Training",
+    cost: "Course Allocated",
+    eligibility: "Exercise Science Students",
+    prerequisites: "Physiological Testing Safety Training",
+    direct_url: "https://fitness.asu.edu/facilities",
+    tags: "vo2 max, metabolic cart, exercise science, cardio, chs"
+  },
+  {
+    name: "Bod Pod Air Displacement Plethysmograph",
+    college: "College of Health Solutions",
+    campus: "Downtown",
+    location: "Health South Metabolic Unit",
+    system_type: "Specialized Training",
+    cost: "Research Allocated",
+    eligibility: "Exercise Science & Nutrition Researchers",
+    prerequisites: "Informed Consent + Operator Certification",
+    direct_url: "https://fitness.asu.edu/facilities",
+    tags: "bod pod, body fat, plethysmography, nutrition, chs"
+  },
+  {
+    name: "3D Bioprinting Fabrication System",
+    college: "SBHSE",
+    campus: "Tempe",
+    location: "Biodesign Institute C",
+    system_type: "Specialized Training",
+    cost: "Project Billable",
+    eligibility: "Biomedical Engineering Researchers",
+    prerequisites: "BSL-2 Certification + Lab PI Form",
+    direct_url: "https://lib.asu.edu/makerspace",
+    tags: "bioprinting, biomaterials, tissue engineering, bme, biodesign"
+  },
+  {
+    name: "Motion Capture & Biomechanics Gait Lab",
+    college: "SBHSE",
+    campus: "Tempe",
+    location: "Interdisciplinary Science (ISTB4)",
+    system_type: "Lab Reservation",
+    cost: "Research Allocated",
+    eligibility: "Biomechanics Researchers",
+    prerequisites: "IRB Approval Protocol + Lab Manager Booking",
+    direct_url: "https://fitness.asu.edu/facilities",
+    tags: "motion capture, gait analysis, biomechanics, vicon, istb4"
+  }
 ];
