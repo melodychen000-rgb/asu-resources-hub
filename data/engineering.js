@@ -8,7 +8,7 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "Fulton Undergraduates (EGR/CSE/EEE/MAE/CEE)",
     prerequisites: "Walk-in or TracCloud online scheduling",
-    direct_url: "https://traccloud.asu.edu/",
+    direct_url: "https://tutoring.asu.edu/",
     tags: "fulton tutoring, engineering tutor, ecg, circuits, python, c++, matlab, eee"
   },
   {
@@ -20,7 +20,7 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "Fulton Undergraduates",
     prerequisites: "Walk-in or TracCloud schedule",
-    direct_url: "https://traccloud.asu.edu/",
+    direct_url: "https://tutoring.asu.edu/",
     tags: "poly tutoring, engineering, peralta, coding, physics, fulton"
   },
   {
@@ -32,7 +32,7 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "All Fulton Immersion & Online Students",
     prerequisites: "Schedule via TracCloud portal",
-    direct_url: "https://traccloud.asu.edu/",
+    direct_url: "https://tutoring.asu.edu/",
     tags: "fulton online, tutoring, zoom, ece, cs, remote tutor"
   },
   {
@@ -68,7 +68,7 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "All ASU Students (ECE/Physics Priority)",
     prerequisites: "Sun Card checkout for 3-day loan",
-    direct_url: "https://lib.asu.edu/services/borrow/technology",
+    direct_url: "https://lib.asu.edu/makerspace/services/tech-lending",
     tags: "oscilloscope, signal generator, multimeters, circuits, electronics, noble"
   },
   {
@@ -80,7 +80,7 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "Engineering Enrolled Students",
     prerequisites: "Sun Card required",
-    direct_url: "https://lib.asu.edu/services/borrow/technology",
+    direct_url: "https://lib.asu.edu/makerspace/services/tech-lending",
     tags: "fpga, verilog, vhdl, xilinx, vivado, embedded, noble"
   },
   {
@@ -92,7 +92,7 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "Fulton Engineering Students",
     prerequisites: "VPN connection + ASURITE license checkout",
-    direct_url: "https://tech.asu.edu/services/campus-it-resources/software",
+    direct_url: "https://uto.asu.edu/",
     tags: "cadence, synopsys, eda, ic layout, virtuoso, vlsi, software, vcl"
   },
   {
@@ -152,7 +152,7 @@ export const engineeringResources = [
     cost: "Free Core Allocation for Students",
     eligibility: "All ASU Students, Faculty & Postdocs",
     prerequisites: "Submit Access Request with Faculty Sponsor / Class Allocation",
-    direct_url: "https://cores.research.asu.edu/research-computing/apply",
+    direct_url: "https://cores.research.asu.edu/",
     tags: "sol, supercomputer, hpc, slurm, linux, gpu, mpi, research computing"
   },
   {
