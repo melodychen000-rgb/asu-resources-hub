@@ -8,8 +8,8 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "Fulton Undergraduates (EGR/CSE/EEE/MAE/CEE)",
     prerequisites: "Walk-in or TracCloud online scheduling",
-    direct_url: "https://asu.trac.cloud/",
-    tags: "fulton tutoring, engineering tutor, ecg, circuits, python, c++, matab, eee"
+    direct_url: "https://traccloud.asu.edu/",
+    tags: "fulton tutoring, engineering tutor, ecg, circuits, python, c++, matlab, eee"
   },
   {
     name: "Fulton Schools Tutoring Center - Polytechnic",
@@ -20,7 +20,7 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "Fulton Undergraduates",
     prerequisites: "Walk-in or TracCloud schedule",
-    direct_url: "https://asu.trac.cloud/",
+    direct_url: "https://traccloud.asu.edu/",
     tags: "poly tutoring, engineering, peralta, coding, physics, fulton"
   },
   {
@@ -32,7 +32,7 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "All Fulton Immersion & Online Students",
     prerequisites: "Schedule via TracCloud portal",
-    direct_url: "https://asu.trac.cloud/",
+    direct_url: "https://traccloud.asu.edu/",
     tags: "fulton online, tutoring, zoom, ece, cs, remote tutor"
   },
   {
@@ -128,7 +128,7 @@ export const engineeringResources = [
     cost: "Free",
     eligibility: "Fulton Students with Maker Badge",
     prerequisites: "Online Laser Safety Quiz passed",
-    direct_url: "https://libcal.asu.edu/r",
+    direct_url: "https://libcal.asu.edu/reserve/spaces",
     tags: "laser cutting, acrylic, wood, prototyping, generator lab, ecg"
   },
   {
