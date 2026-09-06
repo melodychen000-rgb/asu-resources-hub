@@ -23,7 +23,7 @@ export const healthLawOtherResources = [
     direct_url: "https://tutoring.asu.edu/writing-centers",
     tags: "physics tutor, phy 121, phy 131, mechanics, e&m, clas, physics clinic"
   },
-  {
+ {
     name: "ASU Center for Meteorite Studies Collection Vault",
     college: "The College of Liberal Arts and Sciences",
     campus: "Tempe",
@@ -32,7 +32,7 @@ export const healthLawOtherResources = [
     cost: "Free",
     eligibility: "All Public & ASU Students",
     prerequisites: "Open gallery hours / Specialist research appointment",
-    direct_url: "https://meteorites.asu.edu/meteorite-collection/",
+    direct_url: "https://cores.research.asu.edu/computing-and-data-services/research-computing/about/",
     tags: "meteorites, space, geology, istb4, science museum, astronomy, planetary"
   },
   {
