@@ -82,7 +82,7 @@ export const coreFacilitiesResources = [
     prerequisites: "Cryo-TEM Sample Prep Course + Staff Approval",
     direct_url: "https://asu.corefacilities.org/",
     tags: "cryo-tem, cryo-em, structural biology, protein imaging"
-  }
+  },
   {
     name: "Single-Crystal X-Ray Diffractometer (SC-XRD)",
     college: "Core Facilities",
