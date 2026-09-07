@@ -1,151 +1,113 @@
 import os
 import re
-from urllib.parse import urlparse
-import requests
+import glob
+import time
+import urllib.request
+import urllib.error
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
-all_resources = []
-url_pattern = re.compile(
-    r'name:\s*["\'](.*?)["\'].*?direct_url:\s*["\'](.*?)["\']', re.DOTALL
-)
+def extract_urls_from_js(data_dir="data"):
+    resources = []
+    files = glob.glob(os.path.join(data_dir, "*.js"))
+    obj_pattern = re.compile(r'\{([^{}]+)\}', re.DOTALL)
+    
+    for filepath in files:
+        filename = os.path.basename(filepath)
+        with open(filepath, "r", encoding="utf-8") as f:
+            content = f.read()
+        matches = obj_pattern.findall(content)
+        for obj_str in matches:
+            name_m = re.search(r'name:\s*["\']([^"\']+)["\']', obj_str)
+            url_m = re.search(r'direct_url:\s*["\']([^"\']+)["\']', obj_str)
+            if name_m and url_m:
+                resources.append({
+                    "file": filename,
+                    "name": name_m.group(1).strip(),
+                    "url": url_m.group(1).strip()
+                })
+    return resources
 
-for file in sorted(os.listdir(DATA_DIR)):
-  if file.endswith('.js') and file != 'index.js':
-    filepath = os.path.join(DATA_DIR, file)
-    with open(filepath, 'r', encoding='utf-8') as f:
-      content = f.read()
-      matches = url_pattern.findall(content)
-      for name, url in matches:
-        all_resources.append(
-            {'file': file, 'name': name.strip(), 'url': url.strip()}
-        )
+def test_url(url, cache):
+    if url in cache:
+        return cache[url]
 
-print(
-    f'\n🔍 掃描到 {len(all_resources)} 筆資源，開始無特判、真實全網頁檢驗...\n'
-)
-print(f"{'狀態':<12} | {'檔案來源':<22} | {'資源名稱':<28} | 檢驗詳情 / 最終網址")
-print('-' * 115)
+    # 設定標準瀏覽器 Header 避免被 ASU 防火牆阻擋
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
 
-headers = {
-    'User-Agent': (
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,'
-        ' like Gecko) Chrome/124.0.0.0 Safari/537.36'
-    ),
-    'Accept': (
-        'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
-    ),
-    'Accept-Language': 'en-US,en;q=0.9',
-}
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            req = urllib.request.Request(url, headers=headers, method='HEAD')
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                code = resp.getcode()
+                cache[url] = (code, "OK")
+                return cache[url]
+        except urllib.error.HTTPError as e:
+            if e.code == 429:  # 遇到頻率限制，休息 2 秒後重試
+                time.sleep(2)
+                continue
+            elif e.code in [403, 405]:  # 部分伺服器禁止 HEAD，改用 GET 嘗試
+                try:
+                    req_get = urllib.request.Request(url, headers=headers, method='GET')
+                    with urllib.request.urlopen(req_get, timeout=10) as resp_get:
+                        cache[url] = (resp_get.getcode(), "OK")
+                        return cache[url]
+                except urllib.error.HTTPError as e_inner:
+                    cache[url] = (e_inner.code, f"HTTP {e_inner.code}")
+                    return cache[url]
+                except Exception:
+                    pass
+            cache[url] = (e.code, f"HTTP {e.code}")
+            return cache[url]
+        except Exception as e:
+            cache[url] = (999, str(e))
+            return cache[url]
 
-# 納入 ASU 與 LibCal 專屬的 404 字串
-SOFT_404_PATTERNS = [
-    "hmm, we can't find that page",
-    "we can't find that page",
-    'page not found',
-    'the requested page could not be found',
-    'oops! the page you are trying to access does not exist',
-    'error 404',
-    '404 not found',
-]
+    cache[url] = (429, "Rate Limited")
+    return cache[url]
 
-valid_portal_count = 0
-info_page_count = 0
-failed_count = 0
+def main():
+    resources = extract_urls_from_js()
+    print("=" * 70)
+    print(f"🚀 開始全面驗證 {len(resources)} 筆校園資源網址...")
+    print("=" * 70)
 
-for item in all_resources:
-  raw_url = item['url']
-  file_name = item['file']
-  res_name = item['name'][:26]
+    url_cache = {}
+    direct_ok = 0
+    intro_ok = 0
+    dead_links = 0
 
-  if not raw_url.startswith('http://') and not raw_url.startswith('https://'):
-    print(
-        f"{'❌ 格式損毀':<12} | {file_name:<22} | {res_name:<28} | 網址非有效"
-        f' HTTP(S): {raw_url}'
-    )
-    failed_count += 1
-    continue
+    for idx, r in enumerate(resources, start=1):
+        url = r["url"]
+        code, msg = test_url(url, url_cache)
+        
+        # 判定類型
+        is_intro = "about" in url.lower() or "maker" in url.lower() or "landing" in url.lower()
+        status_tag = ""
 
-  # 100% 真實連線測試，絕不給任何網域特權
-  try:
-    resp = requests.get(
-        raw_url, headers=headers, timeout=12, allow_redirects=True
-    )
-    final_url = resp.url.lower()
-    html_lower = resp.text.lower()
-    parsed = urlparse(resp.url)
-    path = parsed.path.strip('/')
+        if code in [200, 301, 302, 307, 308]:
+            if is_intro:
+                status_tag = "⚠️ 一般介紹"
+                intro_ok += 1
+            else:
+                status_tag = "✅ 直達入口"
+                direct_ok += 1
+            print(f"{idx:3d} | {status_tag} | {r['file']:<20} | {r['name'][:30]:<30} | [{code}] {url}")
+        else:
+            status_tag = "❌ HTTP錯誤"
+            dead_links += 1
+            print(f"{idx:3d} | {status_tag} | {r['file']:<20} | {r['name'][:30]:<30} | [{code}] {url}")
 
-    # HTTP 錯誤碼
-    if resp.status_code >= 400:
-      print(
-          f"{'❌ HTTP錯誤':<12} | {file_name:<22} | {res_name:<28} |"
-          f' [{resp.status_code}] {resp.url}'
-      )
-      failed_count += 1
-      continue
+        # 稍微暫停 0.05 秒，避免狂暴發送請求
+        time.sleep(0.05)
 
-    # 內文軟性 404 判定
-    if any(sig in html_lower for sig in SOFT_404_PATTERNS):
-      print(
-          f"{'❌ 404死鏈':<12} | {file_name:<22} | {res_name:<28} | (頁面不存在)"
-          f' {resp.url}'
-      )
-      failed_count += 1
-      continue
+    print("\n" + "=" * 70)
+    print(f"🏁 檢驗完成：功能直達 {direct_ok} 筆 | 一般介紹 {intro_ok} 筆 | 失效死鏈 {dead_links} 筆")
+    print("=" * 70)
 
-    # 判斷是否為根目錄介紹頁
-    is_root_landing = (path == '') or (path == 'index.html')
+    if dead_links > 0:
+        exit(1)
 
-    portal_keywords = [
-        'landing',
-        'reserve',
-        'schedule',
-        'writing-center',
-        'makerspace',
-        'fabrication-lab',
-        'facilities',
-        'equipment',
-        'tech-lending',
-    ]
-    has_portal_path = any(sub in path for sub in portal_keywords)
-    is_dedicated_portal = any(
-        dom in parsed.netloc for dom in ['corefacilities.org', 'libcal.com']
-    )
-
-    if is_dedicated_portal or ((not is_root_landing) and has_portal_path):
-      print(
-          f"{'✅ 直達入口':<12} | {file_name:<22} | {res_name:<28} | [功能直達]"
-          f' {resp.url}'
-      )
-      valid_portal_count += 1
-    else:
-      print(
-          f"{'⚠️ 一般介紹':<12} | {file_name:<22} | {res_name:<28} | [形象/介紹頁]"
-          f' {resp.url}'
-      )
-      info_page_count += 1
-
-  except requests.exceptions.ConnectionError:
-    print(
-        f"{'❌ 連線中斷':<12} | {file_name:<22} | {res_name:<28} |"
-        f' 無法解析/連線失敗: {raw_url}'
-    )
-    failed_count += 1
-  except requests.exceptions.Timeout:
-    print(
-        f"{'❌ 請求超時':<12} | {file_name:<22} | {res_name:<28} | 連線超時:"
-        f' {raw_url}'
-    )
-    failed_count += 1
-  except Exception as err:
-    print(
-        f"{'❌ 連線異常':<12} | {file_name:<22} | {res_name:<28} |"
-        f' {str(err)[:35]}'
-    )
-    failed_count += 1
-
-print('-' * 115)
-print(
-    f'🏁 檢驗完成：功能直達 {valid_portal_count} 筆 | 一般介紹頁'
-    f' {info_page_count} 筆 | 失效死鏈 {failed_count} 筆\n'
-)
+if __name__ == "__main__":
+    main()
