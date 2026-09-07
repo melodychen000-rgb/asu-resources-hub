@@ -5,11 +5,11 @@ export const coreFacilitiesResources = [
     campus: "Tempe",
     location: "Bateman Physical Sciences H-Wing",
     system_type: "iLab",
-    cost: "Fee-based",
+    cost: "Hourly Rate via iLab",
     eligibility: "Trained Researchers",
     prerequisites: "EH&S Safety + iLab Account Certification",
-    direct_url: "https://asu.corefacilities.org/",
-    tags: "sem, tem, electron microscope, imaging, nano, eyring"
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "sem, tem, electron microscope, imaging, nano, core facilities"
   },
   {
     name: "Atomic Force Microscope (AFM)",
@@ -17,11 +17,11 @@ export const coreFacilitiesResources = [
     campus: "Tempe",
     location: "Goldwater Center (GWC)",
     system_type: "iLab",
-    cost: "Fee-based",
+    cost: "Hourly Rate via iLab",
     eligibility: "Certified AFM Operators",
     prerequisites: "AFM Operator Certification Exam",
-    direct_url: "https://asu.corefacilities.org/",
-    tags: "afm, surface metrology, atomic force, nanoscale"
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "afm, surface metrology, atomic force, nanoscale, core facilities"
   },
   {
     name: "X-Ray Diffraction Facility (XRD)",
@@ -29,10 +29,10 @@ export const coreFacilitiesResources = [
     campus: "Tempe",
     location: "Goldwater Center (GWC)",
     system_type: "iLab",
-    cost: "Fee-based",
+    cost: "Hourly Rate via iLab",
     eligibility: "Materials Researchers",
     prerequisites: "Radiation Safety Course + iLab Account",
-    direct_url: "https://asu.corefacilities.org/",
+    direct_url: "https://asu.corefacilities.org/landing/261",
     tags: "xrd, x-ray diffraction, crystal structure, materials"
   },
   {
@@ -41,11 +41,11 @@ export const coreFacilitiesResources = [
     campus: "Tempe",
     location: "Physical Sciences D-Wing",
     system_type: "iLab",
-    cost: "Fee-based",
+    cost: "Hourly Rate via iLab",
     eligibility: "Trained Chemistry Researchers",
     prerequisites: "High Magnetic Field Safety + Practical Exam",
-    direct_url: "https://asu.corefacilities.org/",
-    tags: "nmr, spectroscopy, chemistry, molecular structure"
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "nmr, spectroscopy, chemistry, molecular structure, core facilities"
   },
   {
     name: "Mass Spectrometry Facility (GC-MS / LC-MS)",
@@ -53,11 +53,11 @@ export const coreFacilitiesResources = [
     campus: "Tempe",
     location: "Physical Sciences D-Wing",
     system_type: "iLab",
-    cost: "Fee-based",
+    cost: "Hourly Rate via iLab",
     eligibility: "Chemistry & Biochemistry Researchers",
     prerequisites: "Sample Submission Form + PI SpeedType Account",
-    direct_url: "https://asu.corefacilities.org/",
-    tags: "mass spectrometry, gcms, lcms, chemical analysis"
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "mass spectrometry, gcms, lcms, chemical analysis, core facilities"
   },
   {
     name: "Laser Scanning Confocal Microscope",
@@ -65,23 +65,23 @@ export const coreFacilitiesResources = [
     campus: "Tempe",
     location: "Biodesign Institute B",
     system_type: "iLab",
-    cost: "Fee-based",
+    cost: "Hourly Rate via iLab",
     eligibility: "Trained Imaging Users",
     prerequisites: "Basic Microscopy Course + Core Staff Approval",
-    direct_url: "https://asu.corefacilities.org/",
-    tags: "confocal, fluorescence, imaging, cells"
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "confocal, fluorescence, imaging, cells, core facilities"
   },
   {
-    name: "Biodesign Cryo-Electron Microscopy Suite (Cryo-TEM)",
+    name: "Biodesign Cryo-Electron Microscopy Core",
     college: "Core Facilities",
     campus: "Tempe",
-    location: "Biodesign Building C",
+    location: "Biodesign Institute C",
     system_type: "iLab",
-    cost: "Fee-based",
-    eligibility: "Structural Biologists & Protein Crystallographers",
-    prerequisites: "Cryo-TEM Sample Prep Course + Staff Approval",
-    direct_url: "https://asu.corefacilities.org/",
-    tags: "cryo-tem, cryo-em, structural biology, protein imaging"
+    cost: "Hourly Rate via iLab",
+    eligibility: "Structural Biology Researchers",
+    prerequisites: "Cryo-EM User Qualification + Sample Screening",
+    direct_url: "https://asu.corefacilities.org/landing/261",
+    tags: "cryo-em, electron microscopy, structural biology, biodesign"
   },
   {
     name: "Single-Crystal X-Ray Diffractometer (SC-XRD)",
